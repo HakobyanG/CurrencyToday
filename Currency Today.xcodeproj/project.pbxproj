@@ -7,23 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500E8058275E8448007D1BDE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500E8057275E8448007D1BDE /* WelcomeViewController.swift */; };
+		501A94AE275D1DD70027DD78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A94AD275D1DD70027DD78 /* ViewController.swift */; };
+		502DB6C127665A4400EB2FCC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502DB6BF27665A4400EB2FCC /* TableViewCell.swift */; };
+		502DB6C227665A4400EB2FCC /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 502DB6C027665A4400EB2FCC /* TableViewCell.xib */; };
+		503E7033275FAFE3000C643A /* AmdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E7032275FAFE3000C643A /* AmdViewController.swift */; };
+		503E7035275FB062000C643A /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E7034275FB062000C643A /* ExchangeRates.swift */; };
+		503E7039275FBEB3000C643A /* RusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E7038275FBEB3000C643A /* RusViewController.swift */; };
+		503E703D275FBEF5000C643A /* EuroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E703C275FBEF5000C643A /* EuroViewController.swift */; };
+		503E7041275FC1FA000C643A /* UsdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E7040275FC1FA000C643A /* UsdViewController.swift */; };
+		50556B18276111FB00E2F9AA /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50556B17276111FB00E2F9AA /* SettingsTableViewCell.swift */; };
+		50556B1C27611F9100E2F9AA /* CurrencyToday-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 50556B1B27611E2700E2F9AA /* CurrencyToday-3.mp4 */; };
 		507BD109275A5308008CFE75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BD108275A5308008CFE75 /* AppDelegate.swift */; };
 		507BD10B275A5308008CFE75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BD10A275A5308008CFE75 /* SceneDelegate.swift */; };
-		507BD10D275A5308008CFE75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BD10C275A5308008CFE75 /* ViewController.swift */; };
+		507BD10D275A5308008CFE75 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BD10C275A5308008CFE75 /* CourseViewController.swift */; };
 		507BD110275A5308008CFE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 507BD10E275A5308008CFE75 /* Main.storyboard */; };
 		507BD112275A5309008CFE75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 507BD111275A5309008CFE75 /* Assets.xcassets */; };
 		507BD115275A5309008CFE75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 507BD113275A5309008CFE75 /* LaunchScreen.storyboard */; };
+		507BD11D275A613B008CFE75 /* ConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BD11C275A613B008CFE75 /* ConvertViewController.swift */; };
+		507BD11F275A6152008CFE75 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BD11E275A6152008CFE75 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		500E8057275E8448007D1BDE /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		501A94AD275D1DD70027DD78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		502DB6BF27665A4400EB2FCC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		502DB6C027665A4400EB2FCC /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		503E7032275FAFE3000C643A /* AmdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmdViewController.swift; sourceTree = "<group>"; };
+		503E7034275FB062000C643A /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
+		503E7038275FBEB3000C643A /* RusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RusViewController.swift; sourceTree = "<group>"; };
+		503E703C275FBEF5000C643A /* EuroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuroViewController.swift; sourceTree = "<group>"; };
+		503E7040275FC1FA000C643A /* UsdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsdViewController.swift; sourceTree = "<group>"; };
+		50556B17276111FB00E2F9AA /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		50556B1B27611E2700E2F9AA /* CurrencyToday-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CurrencyToday-3.mp4"; sourceTree = "<group>"; };
 		507BD105275A5308008CFE75 /* Currency Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Currency Today.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		507BD108275A5308008CFE75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		507BD10A275A5308008CFE75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		507BD10C275A5308008CFE75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		507BD10C275A5308008CFE75 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		507BD10F275A5308008CFE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		507BD111275A5309008CFE75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		507BD114275A5309008CFE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		507BD116275A5309008CFE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		507BD11C275A613B008CFE75 /* ConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewController.swift; sourceTree = "<group>"; };
+		507BD11E275A6152008CFE75 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +63,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		503E7042275FC9F5000C643A /* CountrysControllers */ = {
+			isa = PBXGroup;
+			children = (
+				503E7032275FAFE3000C643A /* AmdViewController.swift */,
+				503E7038275FBEB3000C643A /* RusViewController.swift */,
+				503E7040275FC1FA000C643A /* UsdViewController.swift */,
+				503E703C275FBEF5000C643A /* EuroViewController.swift */,
+			);
+			path = CountrysControllers;
+			sourceTree = "<group>";
+		};
+		503E7043275FCA6B000C643A /* WelcomeVideo */ = {
+			isa = PBXGroup;
+			children = (
+				50556B1B27611E2700E2F9AA /* CurrencyToday-3.mp4 */,
+			);
+			path = WelcomeVideo;
+			sourceTree = "<group>";
+		};
+		50556B192761125300E2F9AA /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				507BD113275A5309008CFE75 /* LaunchScreen.storyboard */,
+				501A94AD275D1DD70027DD78 /* ViewController.swift */,
+				503E7043275FCA6B000C643A /* WelcomeVideo */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		50556B1A2761126F00E2F9AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				507BD10C275A5308008CFE75 /* CourseViewController.swift */,
+				507BD11C275A613B008CFE75 /* ConvertViewController.swift */,
+				507BD11E275A6152008CFE75 /* SettingsViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		50556B1F2761227B00E2F9AA /* Cell&Files */ = {
+			isa = PBXGroup;
+			children = (
+				50556B17276111FB00E2F9AA /* SettingsTableViewCell.swift */,
+				503E7034275FB062000C643A /* ExchangeRates.swift */,
+			);
+			path = "Cell&Files";
+			sourceTree = "<group>";
+		};
 		507BD0FC275A5307008CFE75 = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +132,16 @@
 			children = (
 				507BD108275A5308008CFE75 /* AppDelegate.swift */,
 				507BD10A275A5308008CFE75 /* SceneDelegate.swift */,
-				507BD10C275A5308008CFE75 /* ViewController.swift */,
+				500E8057275E8448007D1BDE /* WelcomeViewController.swift */,
 				507BD10E275A5308008CFE75 /* Main.storyboard */,
-				507BD111275A5309008CFE75 /* Assets.xcassets */,
-				507BD113275A5309008CFE75 /* LaunchScreen.storyboard */,
+				50556B192761125300E2F9AA /* Launch */,
+				50556B1A2761126F00E2F9AA /* Views */,
+				503E7042275FC9F5000C643A /* CountrysControllers */,
+				50556B1F2761227B00E2F9AA /* Cell&Files */,
 				507BD116275A5309008CFE75 /* Info.plist */,
+				507BD111275A5309008CFE75 /* Assets.xcassets */,
+				502DB6BF27665A4400EB2FCC /* TableViewCell.swift */,
+				502DB6C027665A4400EB2FCC /* TableViewCell.xib */,
 			);
 			path = "Currency Today";
 			sourceTree = "<group>";
@@ -125,6 +204,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50556B1C27611F9100E2F9AA /* CurrencyToday-3.mp4 in Resources */,
+				502DB6C227665A4400EB2FCC /* TableViewCell.xib in Resources */,
 				507BD115275A5309008CFE75 /* LaunchScreen.storyboard in Resources */,
 				507BD112275A5309008CFE75 /* Assets.xcassets in Resources */,
 				507BD110275A5308008CFE75 /* Main.storyboard in Resources */,
@@ -138,9 +219,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				507BD10D275A5308008CFE75 /* ViewController.swift in Sources */,
+				503E7033275FAFE3000C643A /* AmdViewController.swift in Sources */,
+				501A94AE275D1DD70027DD78 /* ViewController.swift in Sources */,
+				507BD10D275A5308008CFE75 /* CourseViewController.swift in Sources */,
 				507BD109275A5308008CFE75 /* AppDelegate.swift in Sources */,
+				503E7039275FBEB3000C643A /* RusViewController.swift in Sources */,
+				502DB6C127665A4400EB2FCC /* TableViewCell.swift in Sources */,
+				50556B18276111FB00E2F9AA /* SettingsTableViewCell.swift in Sources */,
+				507BD11D275A613B008CFE75 /* ConvertViewController.swift in Sources */,
+				507BD11F275A6152008CFE75 /* SettingsViewController.swift in Sources */,
 				507BD10B275A5308008CFE75 /* SceneDelegate.swift in Sources */,
+				500E8058275E8448007D1BDE /* WelcomeViewController.swift in Sources */,
+				503E7041275FC1FA000C643A /* UsdViewController.swift in Sources */,
+				503E703D275FBEF5000C643A /* EuroViewController.swift in Sources */,
+				503E7035275FB062000C643A /* ExchangeRates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,11 +384,15 @@
 				DEVELOPMENT_TEAM = 5VLZVYD9B8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Currency Today/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Currency Today";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +402,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,11 +416,15 @@
 				DEVELOPMENT_TEAM = 5VLZVYD9B8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Currency Today/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Currency Today";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +434,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
