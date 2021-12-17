@@ -9,9 +9,6 @@ import UIKit
 
 class ConvertViewController: UIViewController {
     
-
-    
-    
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var amd: UIButton!
     @IBOutlet weak var rus: UIButton!

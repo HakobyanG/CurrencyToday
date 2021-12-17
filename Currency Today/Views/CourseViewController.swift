@@ -7,19 +7,44 @@
 
 import UIKit
 
-class CourseViewController: UIViewController{
-
+class CourseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     @IBOutlet weak var timeData: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-
+    let logos = ["arm","rub","usa","euro"]
+    let courseData = ["AMD","RUB","USD","EUR"]
+    let courseName = ["Dram","Rubli","Dollar","Euro"]
+//    let courses = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
         getCurrentDate()
+        let nibName = UINib(nibName: "TableViewCell", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "tableViewCell")
     }
-    func getCurrentDate()-> Date {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return courseData.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TableViewCell
+        cell.comonInit(logos[indexPath.item], title: courseData[indexPath.item], name: courseName[indexPath.item], course: "0")
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+//        vc.commonInit(logos[indexPath.item], title: courseData[indexPath.item])
+        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    func getCurrentDate(){
         var now = Date()
         var nowComponents = DateComponents()
         let calendar = Calendar.current
@@ -29,7 +54,6 @@ class CourseViewController: UIViewController{
         nowComponents.timeZone = NSTimeZone.local
         now = calendar.date(from: nowComponents)!
         timeData.text = "\(nowComponents.day!).\(nowComponents.month!).\(nowComponents.year!)"
-        return now as Date
     }
     @IBAction func appendButton(_ sender: Any) {
     }
@@ -48,5 +72,13 @@ class CourseViewController: UIViewController{
         vc?.modalTransitionStyle = .crossDissolve
         vc?.modalPresentationStyle = .overFullScreen
         self.present(vc!, animated: true, completion: nil)
+    }
+}
+extension UIViewController {
+    static func loadFromNib() -> Self {
+        func instantiateFromNib<T: UIViewController>() -> T {
+            return T.init(nibName: String(describing: T.self),bundle: nil)
+        }
+        return instantiateFromNib()
     }
 }
