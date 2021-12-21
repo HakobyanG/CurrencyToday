@@ -7,41 +7,55 @@
 
 import UIKit
 
+struct CourseOption{
+    let title: String
+    let name: String
+    let currency: String
+    let backgroundImage: UIImage
+    let backgroundColor: UIColor
+    let course: String
+}
 class CourseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     @IBOutlet weak var timeData: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    let logos = ["arm","rub","usa","euro"]
-    let courseData = ["AMD","RUB","USD","EUR"]
-    let courseName = ["Dram","Rubli","Dollar","Euro"]
-//    let courses = [String]()
-    
+    var models = [CourseOption]()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifier)
         getCurrentDate()
-        let nibName = UINib(nibName: "TableViewCell", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: "tableViewCell")
+        configure()
+    }
+    func configure() {
+        models.append(contentsOf: [
+            CourseOption(title: "Ներկայիս արժույթը և գրաֆիկը", name: "AMD", currency: "Դրամ", backgroundImage: UIImage(named: "arm")!, backgroundColor: .systemTeal, course: "0"),
+            CourseOption(title: "", name: "RUB", currency: "Ռուբլի", backgroundImage: UIImage(named: "rub")!, backgroundColor: .systemTeal, course: "0"),
+            CourseOption(title: "", name: "USD", currency: "Դոլլար", backgroundImage: UIImage(named: "usa")!, backgroundColor: .systemTeal, course: "0"),
+            CourseOption(title: "", name: "EURO", currency: "Եվրո", backgroundImage: UIImage(named: "euro")!, backgroundColor: .systemTeal, course: "0")
+        ])
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return courseData.count
+        return models.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TableViewCell
-        cell.comonInit(logos[indexPath.item], title: courseData[indexPath.item], name: courseName[indexPath.item], course: "0")
+        let model = models[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell else{
+            return UITableViewCell()
+        }
+        cell.configure(with: model)
         return cell
     }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let section = models[section]
+        return section.title
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 80
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//        vc.commonInit(logos[indexPath.item], title: courseData[indexPath.item])
-        self.present(vc, animated: true, completion: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
         self.tableView.deselectRow(at: indexPath, animated: true)
     }
     func getCurrentDate(){
@@ -74,11 +88,4 @@ class CourseViewController: UIViewController, UITableViewDataSource, UITableView
         self.present(vc!, animated: true, completion: nil)
     }
 }
-extension UIViewController {
-    static func loadFromNib() -> Self {
-        func instantiateFromNib<T: UIViewController>() -> T {
-            return T.init(nibName: String(describing: T.self),bundle: nil)
-        }
-        return instantiateFromNib()
-    }
-}
+

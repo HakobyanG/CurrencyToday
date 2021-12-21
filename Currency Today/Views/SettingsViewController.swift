@@ -7,10 +7,6 @@
 
 import UIKit
 
-//struct Section {
-//    let title: String
-//    let options: [SettingsOption]
-//}
 struct SettingsOption {
     let title: String
     let name: String
@@ -21,9 +17,7 @@ struct SettingsOption {
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-//    var models = [Section]()
     var models = [SettingsOption]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -40,9 +34,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 title: "", name: "Մեր մասին", backgroundColor: .systemTeal, backgroundImage: UIImage(systemName: "house.fill")!){
                 },
             SettingsOption(
-                title: "", name: "Ծանուցումներ", backgroundColor: .systemTeal, backgroundImage: UIImage(systemName: "message.and.waveform")!){
-                },
-            SettingsOption(
                 title: "", name: "Կիսվել Հավելվածով", backgroundColor: .systemTeal, backgroundImage: UIImage(systemName: "doc.append.fill")!){
                 },
             SettingsOption(
@@ -50,24 +41,8 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 },
             SettingsOption(
                 title: "", name: "Լեզու", backgroundColor: .systemTeal, backgroundImage: UIImage(systemName: "globe")!){
-                },
+                }
         ])
-//        models.append(Section(title: "Կապ", options: [
-//            SettingsOption(name: "Կապ մեզ հետ", backgroundColor: .systemTeal, backgroundImage: UIImage(systemName: "person.text.rectangle")!){
-//            },
-//            SettingsOption(name: "Մեր մասին", backgroundColor: .systemTeal, backgroundImage: UIImage(systemName: "house.fill")!) {
-//            },
-//        ]))
-//        models.append(Section(title: "Հավելված", options: [
-//            SettingsOption(name: "Ծանուցումներ", backgroundColor: .systemTeal, backgroundImage: UIImage(systemName: "message.and.waveform")!) {
-//            },
-//            SettingsOption(name: "Կիսվել Հավելվածով", backgroundColor: .systemTeal, backgroundImage: UIImage(systemName: "doc.append.fill")!) {
-//            },
-//            SettingsOption(name: "Հավելվածի մասին", backgroundColor: .systemTeal, backgroundImage: UIImage(systemName: "apps.iphone")!) {
-//            },
-//            SettingsOption(name: "Լեզու", backgroundColor: .systemTeal, backgroundImage: UIImage(systemName: "globe")!) {
-//            }
-//        ]))
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -77,14 +52,9 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         return section.title
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return models[section].options.count
         return models.count
     }
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return models.count
-//    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let model = models[indexPath.section].options[indexPath.row]
         let model = models[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.identifier, for: indexPath) as? SettingsTableViewCell else{
             return UITableViewCell()
@@ -94,9 +64,27 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        self.present(vc, animated: true, completion: nil)
+        if models[indexPath.item].name == "Կապ մեզ հետ" {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ConnectWithOurViewController") as! ConnectWithOurViewController
+            self.present(vc, animated: true, completion: nil)
+        }else if models[indexPath.item].name == "Մեր մասին" {
+            let alert = UIAlertController(title: "Մեր մասին", message: "", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Լավ", style: .destructive, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }else if models[indexPath.item].name == "Կիսվել Հավելվածով" {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ConnectWithOurViewController") as! ConnectWithOurViewController
+            self.present(vc, animated: true, completion: nil)
+        }else if models[indexPath.item].name == "Հավելվածի մասին" {
+            let alert = UIAlertController(title: "Հավելվածի մասին", message: "", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Լավ", style: .destructive, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }else if models[indexPath.item].name == "Լեզու" {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
     @IBAction func courseButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

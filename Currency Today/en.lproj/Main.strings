@@ -1,0 +1,124 @@
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "1fB-lE-4ZE"; */
+"1fB-lE-4ZE.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1fB-lE-4ZE"; */
+"1fB-lE-4ZE.normalTitle" = " ";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "70S-Ny-Etx"; */
+"70S-Ny-Etx.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "70S-Ny-Etx"; */
+"70S-Ny-Etx.normalTitle" = " ";
+
+/* Class = "UILabel"; text = "Լրացրեք գումարի չափը"; ObjectID = "9PW-jx-XA8"; */
+"9PW-jx-XA8.text" = "Fill in the amount";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "9we-CB-79e"; */
+"9we-CB-79e.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "9we-CB-79e"; */
+"9we-CB-79e.normalTitle" = " ";
+
+/* Class = "UILabel"; text = "  "; ObjectID = "DOS-iL-BmU"; */
+"DOS-iL-BmU.text" = " ";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "DSC-nj-PCp"; */
+"DSC-nj-PCp.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "DSC-nj-PCp"; */
+"DSC-nj-PCp.normalTitle" = " ";
+
+/* Class = "UINavigationItem"; title = "Կարգավորումներ"; ObjectID = "GCr-UB-KXK"; */
+"GCr-UB-KXK.title" = "Settings";
+
+/* Class = "UILabel"; text = "Փոփոխված արժեքը"; ObjectID = "J1Y-An-G0L"; */
+"J1Y-An-G0L.text" = "Modified value";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "J8f-j1-WoZ"; */
+"J8f-j1-WoZ.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "J8f-j1-WoZ"; */
+"J8f-j1-WoZ.normalTitle" = " ";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "K5H-cK-e29"; */
+"K5H-cK-e29.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "K5H-cK-e29"; */
+"K5H-cK-e29.normalTitle" = " ";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "L4T-Jq-yRR"; */
+"L4T-Jq-yRR.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "L4T-Jq-yRR"; */
+"L4T-Jq-yRR.normalTitle" = " ";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "MJo-Hz-NTZ"; */
+"MJo-Hz-NTZ.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "MJo-Hz-NTZ"; */
+"MJo-Hz-NTZ.normalTitle" = " ";
+
+/* Class = "UILabel"; text = "12.12.12"; ObjectID = "P7J-W0-yFo"; */
+"P7J-W0-yFo.text" = "12.12.12";
+
+/* Class = "UILabel"; text = "Փոփոխված արժեքը"; ObjectID = "SOF-TS-qQA"; */
+"SOF-TS-qQA.text" = "Modified value";
+
+/* Class = "UILabel"; text = "Լրացրեք գումարի չափը"; ObjectID = "UGh-9d-9Sp"; */
+"UGh-9d-9Sp.text" = "Fill in the amount";
+
+/* Class = "UILabel"; text = "Change Language"; ObjectID = "Vkg-Hg-oeQ"; */
+"Vkg-Hg-oeQ.text" = "Change Language";
+
+/* Class = "UILabel"; text = "Լրացրեք գումարի չափը"; ObjectID = "WE4-73-h6f"; */
+"WE4-73-h6f.text" = "Fill in the amount";
+
+/* Class = "UILabel"; text = "Փոփոխված արժեք"; ObjectID = "WPm-EJ-eYa"; */
+"WPm-EJ-eYa.text" = "Modified value";
+
+/* Class = "UINavigationItem"; title = "Փոխակերպում"; ObjectID = "a60-8Q-qbJ"; */
+"a60-8Q-qbJ.title" = "Change";
+
+/* Class = "UIButton"; configuration.title = "Փոփոխել"; ObjectID = "fM0-0C-4Nn"; */
+"fM0-0C-4Nn.configuration.title" = "Edit";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fM0-0C-4Nn"; */
+"fM0-0C-4Nn.normalTitle" = " ";
+
+/* Class = "UILabel"; text = "Լրացրեք գումարի չափը"; ObjectID = "loL-CO-VO8"; */
+"loL-CO-VO8.text" = "Fill in the amount";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "oOx-3M-a3t"; */
+"oOx-3M-a3t.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oOx-3M-a3t"; */
+"oOx-3M-a3t.normalTitle" = " ";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "rZI-IZ-dwM"; */
+"rZI-IZ-dwM.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rZI-IZ-dwM"; */
+"rZI-IZ-dwM.normalTitle" = " ";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "sCZ-Uo-WcU"; */
+"sCZ-Uo-WcU.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "sCZ-Uo-WcU"; */
+"sCZ-Uo-WcU.normalTitle" = " ";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "tNh-gg-B3P"; */
+"tNh-gg-B3P.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tNh-gg-B3P"; */
+"tNh-gg-B3P.normalTitle" = " ";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "uVs-i6-uUO"; */
+"uVs-i6-uUO.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uVs-i6-uUO"; */
+"uVs-i6-uUO.normalTitle" = " ";
+
+/* Class = "UILabel"; text = "Փոփոխված արժեքը"; ObjectID = "zVz-jj-04m"; */
+"zVz-jj-04m.text" = "Modified value";
+
+"GJB-7Q-A2x.text" = ["Dram ","Rubli","Dollar","Euro"]

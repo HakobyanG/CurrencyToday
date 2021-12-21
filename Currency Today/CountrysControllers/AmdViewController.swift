@@ -11,6 +11,7 @@ class AmdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
 
     
 
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
@@ -30,6 +31,7 @@ class AmdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         view.addSubview(textField)
         view.addSubview(pickerView)
         view.addSubview(label2)
+        view.addSubview(nameLabel)
         fetchJson()
         textField.delegate = self
         pickerView.delegate = self
