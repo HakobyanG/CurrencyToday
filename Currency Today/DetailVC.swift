@@ -8,6 +8,8 @@
 import UIKit
 
 class DetailVC: UIViewController {
+    
+    static let identifier = "DetailVC"
 
     @IBOutlet weak var detailImage: UIImageView!
     var imageName: String!

@@ -1,20 +1,23 @@
 //
-//  EuroViewController.swift
+//  KztViewController.swift
 //  Currency Today
 //
-//  Created by Garnik on 12/7/21.
+//  Created by Garnik on 12/24/21.
 //
 
 import UIKit
 
-class EuroViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
-
+class KztViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+    
+    
+    
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var label2: UILabel!
-    @IBOutlet weak var label3: UILabel!
+    
     var currencyCode: [String] = []
     var volues: [Double] = []
     var activeCurrency = 0.0
@@ -27,10 +30,10 @@ class EuroViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         view.layer.addSublayer(layer)
         view.addSubview(label)
         view.addSubview(name)
-        view.addSubview(label2)
-        view.addSubview(label3)
         view.addSubview(textField)
         view.addSubview(pickerView)
+        view.addSubview(label2)
+        view.addSubview(nameLabel)
         fetchJson()
         textField.delegate = self
         pickerView.delegate = self
@@ -62,7 +65,7 @@ class EuroViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         updateViews(input: activeCurrency)
     }
     func fetchJson() {
-        guard let url = URL(string: "https://open.er-api.com/v6/latest/EUR") else{ return }
+        guard let url = URL(string: "https://open.er-api.com/v6/latest/KZT") else{ return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
                 print(error!)
@@ -84,3 +87,4 @@ class EuroViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         }.resume()
     }
 }
+

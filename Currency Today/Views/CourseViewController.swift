@@ -8,7 +8,6 @@
 import UIKit
 
 struct CourseOption{
-    let title: String
     let name: String
     let currency: String
     let backgroundImage: UIImage
@@ -17,12 +16,15 @@ struct CourseOption{
 }
 class CourseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
+    @IBOutlet weak var append: UIButton!
     @IBOutlet weak var timeData: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
+    var courses = ["TDR","TRD"]
     var models = [CourseOption]()
+    let headerTitle = "Ներկայիս արժույթը և գրաֆիկը"
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.allowsMultipleSelectionDuringEditing = false
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifier)
@@ -31,10 +33,12 @@ class CourseViewController: UIViewController, UITableViewDataSource, UITableView
     }
     func configure() {
         models.append(contentsOf: [
-            CourseOption(title: "Ներկայիս արժույթը և գրաֆիկը", name: "AMD", currency: "Դրամ", backgroundImage: UIImage(named: "arm")!, backgroundColor: .systemTeal, course: "0"),
-            CourseOption(title: "", name: "RUB", currency: "Ռուբլի", backgroundImage: UIImage(named: "rub")!, backgroundColor: .systemTeal, course: "0"),
-            CourseOption(title: "", name: "USD", currency: "Դոլլար", backgroundImage: UIImage(named: "usa")!, backgroundColor: .systemTeal, course: "0"),
-            CourseOption(title: "", name: "EURO", currency: "Եվրո", backgroundImage: UIImage(named: "euro")!, backgroundColor: .systemTeal, course: "0")
+            CourseOption(name: "AMD", currency: "Դրամ", backgroundImage: UIImage(named: "arm")!, backgroundColor: .systemTeal, course: "0"),
+            CourseOption(name: "RUB", currency: "Ռուբլի", backgroundImage: UIImage(named: "rub")!, backgroundColor: .systemTeal, course: "0"),
+            CourseOption(name: "USD", currency: "Դոլլար", backgroundImage: UIImage(named: "usa")!, backgroundColor: .systemTeal, course: "0"),
+            CourseOption(name: "EURO", currency: "Եվրո", backgroundImage: UIImage(named: "euro")!, backgroundColor: .systemTeal, course: "0"),
+            CourseOption(name: "GEL", currency: "Լարի", backgroundImage: UIImage(named: "lari")!, backgroundColor: .systemTeal, course: "0"),
+            CourseOption(name: "KZT", currency: "Տենգե", backgroundImage: UIImage(named: "tenge")!, backgroundColor: .systemTeal, course: "0")
         ])
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,8 +53,8 @@ class CourseViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let section = models[section]
-        return section.title
+        let section = headerTitle
+        return section
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
@@ -69,9 +73,23 @@ class CourseViewController: UIViewController, UITableViewDataSource, UITableView
         now = calendar.date(from: nowComponents)!
         timeData.text = "\(nowComponents.day!).\(nowComponents.month!).\(nowComponents.year!)"
     }
-    @IBAction func appendButton(_ sender: Any) {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
-    @IBAction func editButton(_ sender: Any) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            models.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    @IBAction func appendButton(_ sender: Any) {
+        tableView.beginUpdates()
+        self.models.insert(CourseOption(name: "KZT", currency: "", backgroundImage: UIImage(named: "arm")!, backgroundColor: .systemTeal, course: "0"), at: 0)
+        tableView.insertRows(at: [IndexPath(row: 4, section: 0)], with: .top)
+        tableView.endUpdates()
     }
     @IBAction func convertButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

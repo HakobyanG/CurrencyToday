@@ -15,15 +15,29 @@ class ConnectWithOurViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func facebook(_ sender: Any) {
+        if let url = NSURL(string: "http://www.facebook.com/hakobyan17.1"){
+            UIApplication.shared.openURL(url as URL)
+            }
     }
-    */
-
+    @IBAction func instagram(_ sender: Any) {
+        if let url = NSURL(string: "http://www.instagram.com/hakobyan17.1"){
+            UIApplication.shared.openURL(url as URL)
+            }
+    }
+    @IBAction func watsapp(_ sender: Any) {
+        if let url = NSURL(string: "http://www.whatsapp.com"){
+            UIApplication.shared.openURL(url as URL)
+            }
+    }
+    @IBAction func mail(_ sender: Any) {
+        if let url = NSURL(string: "http://www.google.com/"){
+            UIApplication.shared.openURL(url as URL)
+            }
+    }
+    @IBAction func telegram(_ sender: Any) {
+        if let url = NSURL(string: "http://www.telegram.org/"){
+            UIApplication.shared.openURL(url as URL)
+            }
+    }
 }

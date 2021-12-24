@@ -34,6 +34,7 @@ class WelcomeViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     @IBAction func rusButton(_ sender: Any) {
+
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CourseViewController") as! CourseViewController
         vc.modalTransitionStyle = .flipHorizontal

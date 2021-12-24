@@ -11,12 +11,21 @@ class AmdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
 
     
 
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var label2: UILabel!
     
+    var rates:[String: Double] = [
+        "RUB": 1,
+        "AMD": 6.52,
+        "EUR": 0.012,
+        "GEL": 0.042,
+        "KZT": 5.94,
+        "USD": 0.0136
+      ]
     var currencyCode: [String] = []
     var volues: [Double] = []
     var activeCurrency = 0.0
@@ -28,6 +37,7 @@ class AmdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         layer.colors = [UIColor.white.cgColor, UIColor.systemTeal.cgColor]
         view.layer.addSublayer(layer)
         view.addSubview(label)
+        view.addSubview(name)
         view.addSubview(textField)
         view.addSubview(pickerView)
         view.addSubview(label2)
@@ -70,7 +80,7 @@ class AmdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                 return
             }
             guard let safeData = data else{return}
-            
+
             do{
                 let rezults = try JSONDecoder().decode(ExchangeRates.self, from: safeData)
                 self.currencyCode.append(contentsOf: rezults.rates.keys)

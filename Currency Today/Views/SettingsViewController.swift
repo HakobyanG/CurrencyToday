@@ -68,14 +68,14 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             let vc = storyboard?.instantiateViewController(withIdentifier: "ConnectWithOurViewController") as! ConnectWithOurViewController
             self.present(vc, animated: true, completion: nil)
         }else if models[indexPath.item].name == "Մեր մասին" {
-            let alert = UIAlertController(title: "Մեր մասին", message: "", preferredStyle: .actionSheet)
+            let alert = UIAlertController(title: "Ծրագիրը կազմել են", message: "Գառնիկ Հակոբյանը և Օնիկ Մկրտչյանը", preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "Լավ", style: .destructive, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }else if models[indexPath.item].name == "Կիսվել Հավելվածով" {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "ConnectWithOurViewController") as! ConnectWithOurViewController
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ShareViewController") as! ShareViewController
             self.present(vc, animated: true, completion: nil)
         }else if models[indexPath.item].name == "Հավելվածի մասին" {
-            let alert = UIAlertController(title: "Հավելվածի մասին", message: "", preferredStyle: .actionSheet)
+            let alert = UIAlertController(title: "Հավելվածի մասին", message: "Ծրագիրը նախատեսված է օրվա ցանկացած ժամին արժույթի մասին տեղեկություն ստանալու,նրանց աճի և նվազման գրաֆիկը տեսնելու, ձեր ունեցած գումարի արտարժույթը իմանալու համար,այն հասանելի է ցանկացած երկրում ցանկացած արժույթով", preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "Լավ", style: .destructive, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }else if models[indexPath.item].name == "Լեզու" {

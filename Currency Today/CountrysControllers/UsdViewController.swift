@@ -9,10 +9,12 @@ import UIKit
 
 class UsdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var label3: UILabel!
     var currencyCode: [String] = []
     var volues: [Double] = []
     var activeCurrency = 0.0
@@ -21,10 +23,12 @@ class UsdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         super.viewDidLoad()
         let layer = CAGradientLayer()
         layer.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
-        layer.colors = [UIColor.white.cgColor, UIColor.systemIndigo.cgColor]
+        layer.colors = [UIColor.white.cgColor, UIColor.systemTeal.cgColor]
         view.layer.addSublayer(layer)
         view.addSubview(label)
+        view.addSubview(name)
         view.addSubview(label2)
+        view.addSubview(label3)
         view.addSubview(textField)
         view.addSubview(pickerView)
         fetchJson()
