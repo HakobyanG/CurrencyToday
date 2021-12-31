@@ -8,30 +8,27 @@
 import UIKit
 
 class ShareViewController: UIViewController {
-
+    var urll: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-    
-    @IBAction func facebook(_ sender: Any) {
-        if let url = NSURL(string: "http://www.facebook.com"){
+    func touchToMedia(urlString: String) {
+        urll = urlString
+        if let url = NSURL(string: urlString) {
             UIApplication.shared.openURL(url as URL)
-            }
+        }
+    }
+    @IBAction func facebook(_ sender: Any) {
+        touchToMedia(urlString: "http://www.facebook.com")
     }
     @IBAction func instagram(_ sender: Any) {
-        if let url = NSURL(string: "http://www.instagram.com"){
-            UIApplication.shared.openURL(url as URL)
-            }
+        touchToMedia(urlString: "http://www.instagram.com")
     }
     @IBAction func whatsapp(_ sender: Any) {
-        if let url = NSURL(string: "http://www.whatsapp.com"){
-            UIApplication.shared.openURL(url as URL)
-            }
+        touchToMedia(urlString: "http://www.whatsapp.com")
     }
     @IBAction func telegram(_ sender: Any) {
-        if let url = NSURL(string: "http://www.telegram.org"){
-            UIApplication.shared.openURL(url as URL)
-            }
+        touchToMedia(urlString: "http://www.telegram.org")
     }
 }

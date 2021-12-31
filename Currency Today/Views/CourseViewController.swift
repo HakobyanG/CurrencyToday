@@ -12,16 +12,19 @@ struct CourseOption{
     let currency: String
     let backgroundImage: UIImage
     let backgroundColor: UIColor
-    let course: String
+    var course: String
 }
 class CourseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     @IBOutlet weak var append: UIButton!
     @IBOutlet weak var timeData: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    var courses = ["TDR","TRD"]
+    
     var models = [CourseOption]()
+    var volues: [Double] = []
+    var currencyCode: [String] = []
     let headerTitle = "Ներկայիս արժույթը և գրաֆիկը"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.allowsMultipleSelectionDuringEditing = false
@@ -30,6 +33,7 @@ class CourseViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifier)
         getCurrentDate()
         configure()
+        fetchJson()
     }
     func configure() {
         models.append(contentsOf: [
@@ -61,6 +65,11 @@ class CourseViewController: UIViewController, UITableViewDataSource, UITableView
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
+        if models[indexPath.item].name != ""{
+            let vc = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailVC
+            vc?.comonInit(lab: models[indexPath.item].name, title: models[indexPath.item].currency, cours: models[indexPath.item].course, image: models[indexPath.item].backgroundImage)
+            self.present(vc!, animated: true, completion: nil)
+        }
     }
     func getCurrentDate(){
         var now = Date()
@@ -82,8 +91,24 @@ class CourseViewController: UIViewController, UITableViewDataSource, UITableView
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func fetchJson() {
+        guard let url = URL(string: "https://open.er-api.com/v6/latest/AMD") else { return }
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                return
+            }
+            guard let safeData = data else { return }
+
+            do {
+                let rezults = try JSONDecoder().decode(ExchangeRates.self, from: safeData)
+                self.currencyCode.append(contentsOf: rezults.rates.keys)
+                self.volues.append(contentsOf: rezults.rates.values)
+            }
+            catch {
+                print(error)
+            }
+        }.resume()
     }
     @IBAction func appendButton(_ sender: Any) {
         tableView.beginUpdates()
@@ -106,4 +131,3 @@ class CourseViewController: UIViewController, UITableViewDataSource, UITableView
         self.present(vc!, animated: true, completion: nil)
     }
 }
-

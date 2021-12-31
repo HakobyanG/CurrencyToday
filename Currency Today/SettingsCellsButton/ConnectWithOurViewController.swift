@@ -8,36 +8,31 @@
 import UIKit
 
 class ConnectWithOurViewController: UIViewController {
-
+    var urll: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-    
-    @IBAction func facebook(_ sender: Any) {
-        if let url = NSURL(string: "http://www.facebook.com/hakobyan17.1"){
+    func touchToMedia(urlString: String) {
+        urll = urlString
+        if let url = NSURL(string: urll){
             UIApplication.shared.openURL(url as URL)
             }
+    }
+    @IBAction func facebook(_ sender: Any) {
+        touchToMedia(urlString: "http://www.facebook.com/hakobyan17.1")
     }
     @IBAction func instagram(_ sender: Any) {
-        if let url = NSURL(string: "http://www.instagram.com/hakobyan17.1"){
-            UIApplication.shared.openURL(url as URL)
-            }
+        touchToMedia(urlString: "http://www.instagram.com/hakobyan17.1")
     }
     @IBAction func watsapp(_ sender: Any) {
-        if let url = NSURL(string: "http://www.whatsapp.com"){
-            UIApplication.shared.openURL(url as URL)
-            }
+        touchToMedia(urlString: "http://www.whatsapp.com")
     }
     @IBAction func mail(_ sender: Any) {
-        if let url = NSURL(string: "http://www.google.com/"){
-            UIApplication.shared.openURL(url as URL)
-            }
+        touchToMedia(urlString: "http://www.google.com/")
+        
     }
     @IBAction func telegram(_ sender: Any) {
-        if let url = NSURL(string: "http://www.telegram.org/"){
-            UIApplication.shared.openURL(url as URL)
-            }
+        touchToMedia(urlString: "http://www.telegram.org/")
     }
 }

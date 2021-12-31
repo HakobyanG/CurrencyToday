@@ -8,20 +8,21 @@
 import UIKit
 
 class DetailVC: UIViewController {
-    
-    static let identifier = "DetailVC"
 
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var title1: UILabel!
+    @IBOutlet weak var course: UILabel!
+    @IBOutlet weak var graphikView: Graphic!
     @IBOutlet weak var detailImage: UIImageView!
-    var imageName: String!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        detailImage.image = UIImage(named: self.imageName)
         // Do any additional setup after loading the view.
     }
-
-    func commonInit(_ imageName: String, title: String) {
-        self.imageName = imageName
-        self.title = title
+    func comonInit(lab: String, title: String,cours: String, image: UIImage) {
+        name.text = lab
+        title1.text = title
+        course.text = cours
+        detailImage.image = image
+        
     }
 }

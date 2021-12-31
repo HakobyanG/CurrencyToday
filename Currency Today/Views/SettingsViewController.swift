@@ -15,9 +15,10 @@ struct SettingsOption {
     let handler: (() -> Void)
 }
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
     var models = [SettingsOption]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
