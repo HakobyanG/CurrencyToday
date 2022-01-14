@@ -8,10 +8,13 @@
 import UIKit
 
 class ConnectWithOurViewController: UIViewController {
+    
+    @IBOutlet weak var clickandwrite: UILabel!
     var urll: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        clickandwrite.text = "clickWrite".localized()
     }
     func touchToMedia(urlString: String) {
         urll = urlString
@@ -30,7 +33,6 @@ class ConnectWithOurViewController: UIViewController {
     }
     @IBAction func mail(_ sender: Any) {
         touchToMedia(urlString: "http://www.google.com/")
-        
     }
     @IBAction func telegram(_ sender: Any) {
         touchToMedia(urlString: "http://www.telegram.org/")

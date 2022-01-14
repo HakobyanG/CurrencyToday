@@ -8,10 +8,15 @@
 import UIKit
 
 class ShareViewController: UIViewController {
+    
     var urll: String = ""
+    
+    @IBOutlet weak var shareApp: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        shareApp.text = "share".localized()
+        
     }
     func touchToMedia(urlString: String) {
         urll = urlString

@@ -6,16 +6,26 @@
 //
 
 import UIKit
+import Localize_Swift
 
-struct CourseOption{
-    let name: String
-    let currency: String
-    let backgroundImage: UIImage
-    let backgroundColor: UIColor
+class CourseOption {
+    var name: String
+    var currency: String
+    var backgroundImage: UIImage
+    var backgroundColor: UIColor
     var course: String
+    
+    init(name: String, currency: String, backgroundImage: UIImage,backgroundColor: UIColor, course: String) {
+        self.name = name
+        self.currency = currency
+        self.backgroundImage = backgroundImage
+        self.backgroundColor = backgroundColor
+        self.course = course
+    }
 }
-class CourseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
+class CourseViewController: UIViewController {
+    
     @IBOutlet weak var append: UIButton!
     @IBOutlet weak var timeData: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -23,7 +33,7 @@ class CourseViewController: UIViewController, UITableViewDataSource, UITableView
     var models = [CourseOption]()
     var volues: [Double] = []
     var currencyCode: [String] = []
-    let headerTitle = "Ներկայիս արժույթը և գրաֆիկը"
+    let headerTitle = "title".localized()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,42 +45,18 @@ class CourseViewController: UIViewController, UITableViewDataSource, UITableView
         configure()
         fetchJson()
     }
+    
     func configure() {
         models.append(contentsOf: [
-            CourseOption(name: "AMD", currency: "Դրամ", backgroundImage: UIImage(named: "arm")!, backgroundColor: .systemTeal, course: "0"),
-            CourseOption(name: "RUB", currency: "Ռուբլի", backgroundImage: UIImage(named: "rub")!, backgroundColor: .systemTeal, course: "0"),
-            CourseOption(name: "USD", currency: "Դոլլար", backgroundImage: UIImage(named: "usa")!, backgroundColor: .systemTeal, course: "0"),
-            CourseOption(name: "EURO", currency: "Եվրո", backgroundImage: UIImage(named: "euro")!, backgroundColor: .systemTeal, course: "0"),
-            CourseOption(name: "GEL", currency: "Լարի", backgroundImage: UIImage(named: "lari")!, backgroundColor: .systemTeal, course: "0"),
-            CourseOption(name: "KZT", currency: "Տենգե", backgroundImage: UIImage(named: "tenge")!, backgroundColor: .systemTeal, course: "0")
+            CourseOption(name: "AMD", currency: "dram".localized(), backgroundImage: UIImage(named: "arm")!, backgroundColor: .systemTeal, course: "1"),
+            CourseOption(name: "RUB", currency: "rubli".localized(), backgroundImage: UIImage(named: "rub")!, backgroundColor: .systemTeal, course: "0"),
+            CourseOption(name: "USD", currency: "dollar".localized(), backgroundImage: UIImage(named: "usa")!, backgroundColor: .systemTeal, course: "0"),
+            CourseOption(name: "EUR", currency: "euro".localized(), backgroundImage: UIImage(named: "euro")!, backgroundColor: .systemTeal, course: "0"),
+            CourseOption(name: "GEL", currency: "lari".localized(), backgroundImage: UIImage(named: "lari")!, backgroundColor: .systemTeal, course: "0"),
+            CourseOption(name: "KZT", currency: "tenge".localized(), backgroundImage: UIImage(named: "tenge")!, backgroundColor: .systemTeal, course: "0")
         ])
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = models[indexPath.row]
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell else{
-            return UITableViewCell()
-        }
-        cell.configure(with: model)
-        return cell
-    }
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let section = headerTitle
-        return section
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.tableView.deselectRow(at: indexPath, animated: true)
-        if models[indexPath.item].name != ""{
-            let vc = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailVC
-            vc?.comonInit(lab: models[indexPath.item].name, title: models[indexPath.item].currency, cours: models[indexPath.item].course, image: models[indexPath.item].backgroundImage)
-            self.present(vc!, animated: true, completion: nil)
-        }
-    }
+    
     func getCurrentDate(){
         var now = Date()
         var nowComponents = DateComponents()
@@ -82,40 +68,39 @@ class CourseViewController: UIViewController, UITableViewDataSource, UITableView
         now = calendar.date(from: nowComponents)!
         timeData.text = "\(nowComponents.day!).\(nowComponents.month!).\(nowComponents.year!)"
     }
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == .delete) {
-            models.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-    }
+    
     func fetchJson() {
         guard let url = URL(string: "https://open.er-api.com/v6/latest/AMD") else { return }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { [self] (data, response, error) in
             if error != nil {
                 print(error!.localizedDescription)
                 return
             }
             guard let safeData = data else { return }
-
+            
             do {
                 let rezults = try JSONDecoder().decode(ExchangeRates.self, from: safeData)
                 self.currencyCode.append(contentsOf: rezults.rates.keys)
                 self.volues.append(contentsOf: rezults.rates.values)
+                rezults.rates.forEach {(key, value) in
+                    self.models = self.models.map {
+                        if $0.name == key {
+                            let courseKey = (Double(models[0].course) ?? 0)/value
+                            $0.course = "\(Double(round(100 * courseKey) / 100))"
+                        }
+                        return $0
+                    }
+                }
+                DispatchQueue.main.async {
+                    tableView.reloadData()
+                }
             }
             catch {
                 print(error)
             }
         }.resume()
     }
-    @IBAction func appendButton(_ sender: Any) {
-        tableView.beginUpdates()
-        self.models.insert(CourseOption(name: "KZT", currency: "", backgroundImage: UIImage(named: "arm")!, backgroundColor: .systemTeal, course: "0"), at: 0)
-        tableView.insertRows(at: [IndexPath(row: 4, section: 0)], with: .top)
-        tableView.endUpdates()
-    }
+    
     @IBAction func convertButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ConvertViewController") as? ConvertViewController
@@ -123,6 +108,7 @@ class CourseViewController: UIViewController, UITableViewDataSource, UITableView
         vc?.modalPresentationStyle = .overFullScreen
         self.present(vc!, animated: true, completion: nil)
     }
+    
     @IBAction func settingsButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController
@@ -130,4 +116,52 @@ class CourseViewController: UIViewController, UITableViewDataSource, UITableView
         vc?.modalPresentationStyle = .overFullScreen
         self.present(vc!, animated: true, completion: nil)
     }
+}
+extension CourseViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return models.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = models[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell else{
+            return UITableViewCell()
+        }
+        cell.configure(with: model)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let section = headerTitle
+        return section
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        if models[indexPath.item].name != ""{
+            let vc = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as! DetailVC
+            let model = models[indexPath.item]
+            vc.text = model.name
+            vc.titl = model.currency
+            vc.cours = model.course
+            vc.image = model.backgroundImage
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            models.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
 }

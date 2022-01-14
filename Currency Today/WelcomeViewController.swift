@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Localize_Swift
+
 class WelcomeViewController: UIViewController {
 
 
@@ -13,8 +15,14 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var armButton: UIButton!
     @IBOutlet weak var ruButton: UIButton!
     @IBOutlet weak var engButton: UIButton!
+    
+    var selectedLanguage = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        gradient()
+    }
+    func gradient() {
         let layer = CAGradientLayer()
         layer.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
         layer.colors = [UIColor.white.cgColor, UIColor.systemTeal.cgColor]
@@ -23,39 +31,23 @@ class WelcomeViewController: UIViewController {
         view.addSubview(armButton)
         view.addSubview(ruButton)
         view.addSubview(engButton)
-        // Do any additional setup after loading the view.
     }
-    @IBAction func armButton(_ sender: Any) {
+    @IBAction func buttonAction(_ sender: UIButton) {
+        let index = sender.tag
+        switch index {
+        case 1:
+            Localize.setCurrentLanguage("hy")
+        case 2:
+            Localize.setCurrentLanguage("ru")
+        case 3:
+            Localize.setCurrentLanguage("en")
+        default:
+            print("Error")
+        }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CourseViewController") as! CourseViewController
         vc.modalTransitionStyle = .flipHorizontal
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true, completion: nil)
-    }
-    @IBAction func rusButton(_ sender: Any) {
-
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "CourseViewController") as! CourseViewController
-        vc.modalTransitionStyle = .flipHorizontal
-        vc.modalPresentationStyle = .overFullScreen
-        self.present(vc, animated: true, completion: nil)
-    }
-    @IBAction func engButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "CourseViewController") as! CourseViewController
-        vc.modalTransitionStyle = .flipHorizontal
-        vc.modalPresentationStyle = .overFullScreen
-        self.present(vc, animated: true, completion: nil)
-    }
-    
-
-}
-extension String {
-    func localized() -> String{
-        return NSLocalizedString(self,
-                                 tableName: "Localizable",
-                                 bundle: .main,
-                                 value: self,
-                                 comment: self)
     }
 }

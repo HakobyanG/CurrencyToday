@@ -30,6 +30,7 @@ class SettingsTableViewCell: UITableViewCell {
         image.tintColor = .white
         return image
     }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(iconContainer)
@@ -38,9 +39,11 @@ class SettingsTableViewCell: UITableViewCell {
         contentView.clipsToBounds = true
         accessoryType = .disclosureIndicator
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         let size: CGFloat = contentView.frame.size.height - 10

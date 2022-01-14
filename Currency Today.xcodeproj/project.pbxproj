@@ -12,9 +12,9 @@
 		500E8058275E8448007D1BDE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500E8057275E8448007D1BDE /* WelcomeViewController.swift */; };
 		501A94AE275D1DD70027DD78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A94AD275D1DD70027DD78 /* ViewController.swift */; };
 		503E7035275FB062000C643A /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E7034275FB062000C643A /* ExchangeRates.swift */; };
-		50432310277746BA00806DE4 /* Graphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5043230F277746BA00806DE4 /* Graphic.swift */; };
 		50556B18276111FB00E2F9AA /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50556B17276111FB00E2F9AA /* SettingsTableViewCell.swift */; };
 		50556B1C27611F9100E2F9AA /* CurrencyToday-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 50556B1B27611E2700E2F9AA /* CurrencyToday-3.mp4 */; };
+		50665F45278EBBC300DC61B4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50665F47278EBBC300DC61B4 /* Localizable.strings */; };
 		50775EC52773A157001929E0 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50775EC42773A157001929E0 /* ShareViewController.swift */; };
 		507BD109275A5308008CFE75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BD108275A5308008CFE75 /* AppDelegate.swift */; };
 		507BD10B275A5308008CFE75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BD10A275A5308008CFE75 /* SceneDelegate.swift */; };
@@ -37,9 +37,11 @@
 		500E8057275E8448007D1BDE /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		501A94AD275D1DD70027DD78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		503E7034275FB062000C643A /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
-		5043230F277746BA00806DE4 /* Graphic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphic.swift; sourceTree = "<group>"; };
 		50556B17276111FB00E2F9AA /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		50556B1B27611E2700E2F9AA /* CurrencyToday-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CurrencyToday-3.mp4"; sourceTree = "<group>"; };
+		50665F46278EBBC300DC61B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		50665F48278EBBCB00DC61B4 /* hy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hy; path = hy.lproj/Localizable.strings; sourceTree = "<group>"; };
+		50665F49278EBBCB00DC61B4 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		50775EC42773A157001929E0 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		507BD105275A5308008CFE75 /* Currency Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Currency Today.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		507BD108275A5308008CFE75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +81,6 @@
 				5D72A93347E769A5DBEA59E1 /* Pods-Currency Today.debug.xcconfig */,
 				A5FD93E2D9C20F8AB37083FA /* Pods-Currency Today.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -196,6 +197,7 @@
 				500745202771E1E0009ACB85 /* SettingsCellsButton */,
 				507BD116275A5309008CFE75 /* Info.plist */,
 				507BD111275A5309008CFE75 /* Assets.xcassets */,
+				50665F47278EBBC300DC61B4 /* Localizable.strings */,
 			);
 			path = "Currency Today";
 			sourceTree = "<group>";
@@ -204,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				50E4C7F927679DC600CB56F2 /* DetailVC.swift */,
-				5043230F277746BA00806DE4 /* Graphic.swift */,
 			);
 			name = Graphics;
 			path = ..;
@@ -280,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50665F45278EBBC300DC61B4 /* Localizable.strings in Resources */,
 				50556B1C27611F9100E2F9AA /* CurrencyToday-3.mp4 in Resources */,
 				507BD115275A5309008CFE75 /* LaunchScreen.storyboard in Resources */,
 				507BD112275A5309008CFE75 /* Assets.xcassets in Resources */,
@@ -337,7 +339,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				50883B2A277B6B7B0023382B /* ComnvertsViewController.swift in Sources */,
-				50432310277746BA00806DE4 /* Graphic.swift in Sources */,
 				50E4C7F42767927500CB56F2 /* TableViewCell.swift in Sources */,
 				5007451F2771D64E009ACB85 /* ConnectWithOurViewController.swift in Sources */,
 				501A94AE275D1DD70027DD78 /* ViewController.swift in Sources */,
@@ -358,6 +359,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		50665F47278EBBC300DC61B4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50665F46278EBBC300DC61B4 /* en */,
+				50665F48278EBBCB00DC61B4 /* hy */,
+				50665F49278EBBCB00DC61B4 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		507BD10E275A5308008CFE75 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

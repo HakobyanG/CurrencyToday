@@ -42,6 +42,7 @@ class TableViewCell: UITableViewCell {
         courseLabel.textColor = .systemTeal
         return courseLabel
     }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(iconContainer)
@@ -52,9 +53,11 @@ class TableViewCell: UITableViewCell {
         contentView.clipsToBounds = true
         accessoryType = .disclosureIndicator
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         let size: CGFloat = contentView.frame.size.height - 10
@@ -75,11 +78,12 @@ class TableViewCell: UITableViewCell {
                                      y: 10,
                                      width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
                                      height: contentView.frame.size.height)
-        courseLabel.frame = CGRect(x: contentView.frame.size.width - 40,
+        courseLabel.frame = CGRect(x: contentView.frame.size.width - 60,
                                    y: 0,
                                    width: contentView.frame.size.width - 100 - iconContainer.frame.size.width,
                                    height: contentView.frame.size.height)
     }
+    
     public func configure(with modal: CourseOption) {
         iconContainer.backgroundColor = modal.backgroundColor
         iconImage.image = modal.backgroundImage

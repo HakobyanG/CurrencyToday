@@ -6,8 +6,16 @@
 //
 
 import UIKit
-
-class ComnvertsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
+class Converts {
+    var name: String
+    var count: Double
+     
+    init(name: String, count: Double) {
+        self.name = name
+        self.count = count
+    }
+}
+class ComnvertsViewController: UIViewController {
 
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var changeName: UILabel!
@@ -16,8 +24,7 @@ class ComnvertsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var convertCourse: UILabel!
     
-    var currencyCode: [String] = []
-    var volues: [Double] = []
+    var dataSource: [Converts] = []
     var activeCurrency = 0.0
     var ap: String = ""
     var text: String = ""
@@ -29,11 +36,11 @@ class ComnvertsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         pckerView.dataSource = self
         courseTextField.addTarget(self, action: #selector(updateViews), for: .editingChanged)
         name.text = text
+        changeName.text = "changeName".localized()
+        label1.text = "money".localized()
         fetchJson()
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+    
     @objc func updateViews(input: Double) {
         guard let amountText = courseTextField.text, let theAmountText = Double(amountText) else{return}
         if courseTextField.text != "" {
@@ -41,19 +48,7 @@ class ComnvertsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             convertCourse.text = String(format: "%.2f", total)
         }
     }
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return currencyCode.count
-    }
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return currencyCode[row]
-    }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        activeCurrency = volues[row]
-        updateViews(input: activeCurrency)
-    }
+    
     func fetchJson() {
         guard let url = URL(string: ap) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -65,15 +60,37 @@ class ComnvertsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 
             do {
                 let rezults = try JSONDecoder().decode(ExchangeRates.self, from: safeData)
-                self.currencyCode.append(contentsOf: rezults.rates.keys)
-                self.volues.append(contentsOf: rezults.rates.values)
+            
+                self.dataSource = rezults.rates.map {
+                    Converts(name: $0.key, count: $0.value)
+                }.sorted(by: {$0.name < $1.name})
                 DispatchQueue.main.async {
                     self.pckerView.reloadAllComponents()
+                    self.activeCurrency = self.dataSource[0].count
                 }
             }
             catch {
                 print(error)
             }
         }.resume()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+}
+extension ComnvertsViewController: UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return dataSource.count
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return dataSource[row].name
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        activeCurrency = dataSource[row].count
+        updateViews(input: activeCurrency)
     }
 }

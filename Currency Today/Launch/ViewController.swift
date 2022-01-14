@@ -9,12 +9,14 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     var player: AVPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundLogo()
     }
+    
     func backgroundLogo () {
         let path = Bundle.main.path(forResource: "CurrencyToday-3", ofType: "mp4")
         player = AVPlayer(url: URL(fileURLWithPath: path!))
@@ -28,6 +30,7 @@ class ViewController: UIViewController {
         player?.play()
         self.player?.isMuted = true
     }
+    
     @objc func playerItemDidReachEnd() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
