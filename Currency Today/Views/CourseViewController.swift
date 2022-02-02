@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Localize_Swift
+
 
 class CourseOption {
     var name: String

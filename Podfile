@@ -5,6 +5,10 @@ target 'Currency Today' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Currency Today
+ pod 'Localize-Swift'
+ pod 'Firebase/Core'
+ pod 'Firebase/Messaging'
+ pod 'Charts'
+
 
 end
