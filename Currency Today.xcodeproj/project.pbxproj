@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004CC00C27AAA11E001F1908 /* ddddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004CC00B27AAA11E001F1908 /* ddddViewController.swift */; };
 		5004FEAB276DB9B400BB2E31 /* ConvertsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5004FEA9276DB9B400BB2E31 /* ConvertsTableViewCell.swift */; };
 		5007451F2771D64E009ACB85 /* ConnectWithOurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5007451E2771D64E009ACB85 /* ConnectWithOurViewController.swift */; };
 		500E8058275E8448007D1BDE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500E8057275E8448007D1BDE /* WelcomeViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		004CC00B27AAA11E001F1908 /* ddddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ddddViewController.swift; sourceTree = "<group>"; };
 		489EFD1FE44D3394DE9ADB5F /* Pods_Currency_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Currency_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5004FEA9276DB9B400BB2E31 /* ConvertsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertsTableViewCell.swift; sourceTree = "<group>"; };
 		5007451E2771D64E009ACB85 /* ConnectWithOurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectWithOurViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				507BD108275A5308008CFE75 /* AppDelegate.swift */,
 				507BD10A275A5308008CFE75 /* SceneDelegate.swift */,
 				500E8057275E8448007D1BDE /* WelcomeViewController.swift */,
+				004CC00B27AAA11E001F1908 /* ddddViewController.swift */,
 				507BD10E275A5308008CFE75 /* Main.storyboard */,
 				50556B192761125300E2F9AA /* Launch */,
 				50556B1A2761126F00E2F9AA /* Views */,
@@ -378,6 +381,7 @@
 			files = (
 				50883B2A277B6B7B0023382B /* ComnvertsViewController.swift in Sources */,
 				50E4C7F42767927500CB56F2 /* TableViewCell.swift in Sources */,
+				004CC00C27AAA11E001F1908 /* ddddViewController.swift in Sources */,
 				5007451F2771D64E009ACB85 /* ConnectWithOurViewController.swift in Sources */,
 				501A94AE275D1DD70027DD78 /* ViewController.swift in Sources */,
 				5004FEAB276DB9B400BB2E31 /* ConvertsTableViewCell.swift in Sources */,
