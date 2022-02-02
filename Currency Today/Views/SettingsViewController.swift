@@ -95,8 +95,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             alert.addAction(UIAlertAction(title: "ok".localized(), style: .destructive, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }else if models[indexPath.item].name == "share".localized() {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "ShareViewController") as! ShareViewController
-            self.present(vc, animated: true, completion: nil)
+            let activityVC = UIActivityViewController(activityItems: [""], applicationActivities: nil)
+            activityVC.popoverPresentationController?.sourceView = self.view
+            self.present(activityVC, animated: true, completion: nil)
         }else if models[indexPath.item].name == "appInfo".localized() {
             let alert = UIAlertController(title: "appInfo".localized(), message: "info".localized(), preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "ok".localized(), style: .destructive, handler: nil))

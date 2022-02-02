@@ -25,10 +25,24 @@
 		507BD11D275A613B008CFE75 /* ConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BD11C275A613B008CFE75 /* ConvertViewController.swift */; };
 		507BD11F275A6152008CFE75 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BD11E275A6152008CFE75 /* SettingsViewController.swift */; };
 		50883B2A277B6B7B0023382B /* ComnvertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50883B29277B6B7B0023382B /* ComnvertsViewController.swift */; };
+		508EE32027AA754800B20948 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 508EE31F27AA754800B20948 /* GoogleService-Info.plist */; };
 		50E4C7F42767927500CB56F2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E4C7F22767927500CB56F2 /* TableViewCell.swift */; };
 		50E4C7FB27679DC600CB56F2 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E4C7F927679DC600CB56F2 /* DetailVC.swift */; };
 		B800CFB5C37C57AA9F242D07 /* Pods_Currency_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489EFD1FE44D3394DE9ADB5F /* Pods_Currency_Today.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		50E33F3B27AA824D0030A498 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		489EFD1FE44D3394DE9ADB5F /* Pods_Currency_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Currency_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,9 +68,16 @@
 		507BD11C275A613B008CFE75 /* ConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewController.swift; sourceTree = "<group>"; };
 		507BD11E275A6152008CFE75 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		50883B29277B6B7B0023382B /* ComnvertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComnvertsViewController.swift; sourceTree = "<group>"; };
+		508EE31F27AA754800B20948 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5098884C277201D300E2F0B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		5098884D277201DD00E2F0B3 /* hy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hy; path = hy.lproj/Main.strings; sourceTree = "<group>"; };
 		5098884E277201F800E2F0B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		50D2740627AA7B9900D0B305 /* Currency Today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Currency Today.entitlements"; sourceTree = "<group>"; };
+		50E33F2D27AA824D0030A498 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		50E33F2F27AA824D0030A498 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		50E33F4727AA8EBC0030A498 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		50E33F4A27AA8EBC0030A498 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		50E33F4C27AA8EBC0030A498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50E4C7F22767927500CB56F2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		50E4C7F927679DC600CB56F2 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		5D72A93347E769A5DBEA59E1 /* Pods-Currency Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currency Today.debug.xcconfig"; path = "Target Support Files/Pods-Currency Today/Pods-Currency Today.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,8 +125,8 @@
 		5021A3AC276E073A00164F36 /* Comnverts Cells */ = {
 			isa = PBXGroup;
 			children = (
-				503E7034275FB062000C643A /* ExchangeRates.swift */,
 				5004FEA9276DB9B400BB2E31 /* ConvertsTableViewCell.swift */,
+				503E7034275FB062000C643A /* ExchangeRates.swift */,
 			);
 			path = "Comnverts Cells";
 			sourceTree = "<group>";
@@ -169,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				507BD107275A5308008CFE75 /* Currency Today */,
+				50E33F4627AA8EBC0030A498 /* Push */,
 				507BD106275A5308008CFE75 /* Products */,
 				0D0D4874E367869E1519AF55 /* Pods */,
 				D7C7A7C275E975851CDB9143 /* Frameworks */,
@@ -186,6 +208,7 @@
 		507BD107275A5308008CFE75 /* Currency Today */ = {
 			isa = PBXGroup;
 			children = (
+				50D2740627AA7B9900D0B305 /* Currency Today.entitlements */,
 				507BD108275A5308008CFE75 /* AppDelegate.swift */,
 				507BD10A275A5308008CFE75 /* SceneDelegate.swift */,
 				500E8057275E8448007D1BDE /* WelcomeViewController.swift */,
@@ -196,10 +219,21 @@
 				50556B1F2761227B00E2F9AA /* Cell&Files */,
 				500745202771E1E0009ACB85 /* SettingsCellsButton */,
 				507BD116275A5309008CFE75 /* Info.plist */,
+				508EE31F27AA754800B20948 /* GoogleService-Info.plist */,
 				507BD111275A5309008CFE75 /* Assets.xcassets */,
 				50665F47278EBBC300DC61B4 /* Localizable.strings */,
 			);
 			path = "Currency Today";
+			sourceTree = "<group>";
+		};
+		50E33F4627AA8EBC0030A498 /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				50E33F4727AA8EBC0030A498 /* NotificationViewController.swift */,
+				50E33F4927AA8EBC0030A498 /* MainInterface.storyboard */,
+				50E33F4C27AA8EBC0030A498 /* Info.plist */,
+			);
+			path = Push;
 			sourceTree = "<group>";
 		};
 		50E4C7F827679D8600CB56F2 /* Graphics */ = {
@@ -215,6 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				489EFD1FE44D3394DE9ADB5F /* Pods_Currency_Today.framework */,
+				50E33F2D27AA824D0030A498 /* UserNotifications.framework */,
+				50E33F2F27AA824D0030A498 /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -231,6 +267,7 @@
 				507BD102275A5308008CFE75 /* Frameworks */,
 				507BD103275A5308008CFE75 /* Resources */,
 				7993119CAF0DA399B7AA0A2C /* [CP] Embed Pods Frameworks */,
+				50E33F3B27AA824D0030A498 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -248,7 +285,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					507BD104275A5308008CFE75 = {
@@ -283,6 +320,7 @@
 			files = (
 				50665F45278EBBC300DC61B4 /* Localizable.strings in Resources */,
 				50556B1C27611F9100E2F9AA /* CurrencyToday-3.mp4 in Resources */,
+				508EE32027AA754800B20948 /* GoogleService-Info.plist in Resources */,
 				507BD115275A5309008CFE75 /* LaunchScreen.storyboard in Resources */,
 				507BD112275A5309008CFE75 /* Assets.xcassets in Resources */,
 				507BD110275A5308008CFE75 /* Main.storyboard in Resources */,
@@ -386,6 +424,14 @@
 				507BD114275A5309008CFE75 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		50E33F4927AA8EBC0030A498 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50E33F4A27AA8EBC0030A498 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -513,8 +559,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D72A93347E769A5DBEA59E1 /* Pods-Currency Today.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Currency Today/Currency Today.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5VLZVYD9B8;
@@ -546,8 +594,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5FD93E2D9C20F8AB37083FA /* Pods-Currency Today.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Currency Today/Currency Today.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5VLZVYD9B8;

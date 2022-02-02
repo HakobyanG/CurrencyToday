@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t9B-dN-GdG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t9B-dN-GdG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -84,9 +84,13 @@
                                 <color key="textColor" systemColor="systemTealColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngwing.com-4" translatesAutoresizingMaskIntoConstraints="NO" id="5f8-Vw-ZkQ">
+                                <rect key="frame" x="242" y="629" width="133" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="15O-dO-Oaj"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.61254552057296929" green="0.90346377618367024" blue="0.91373123997011207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="15O-dO-Oaj" firstAttribute="trailing" secondItem="Vkg-Hg-oeQ" secondAttribute="trailing" constant="100" id="2Z3-1H-qPF"/>
                             <constraint firstItem="1fB-lE-4ZE" firstAttribute="top" secondItem="Vkg-Hg-oeQ" secondAttribute="bottom" constant="60" id="6rv-ml-HeL"/>
@@ -106,13 +110,14 @@
                     <connections>
                         <outlet property="armButton" destination="1fB-lE-4ZE" id="M2N-ga-LlJ"/>
                         <outlet property="engButton" destination="DSC-nj-PCp" id="hUW-aF-36o"/>
+                        <outlet property="image" destination="5f8-Vw-ZkQ" id="KYe-Dv-JQa"/>
                         <outlet property="label" destination="Vkg-Hg-oeQ" id="SpV-aa-Uo7"/>
                         <outlet property="ruButton" destination="70S-Ny-Etx" id="O7e-fK-fBt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKb-pS-4Kr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2214" y="-98"/>
+            <point key="canvasLocation" x="-2214.4927536231885" y="-98.4375"/>
         </scene>
         <!--Comnverts View Controller-->
         <scene sceneID="c12-Kb-jyx">
@@ -602,7 +607,7 @@
                     <rectEdge key="edges" left="YES" right="YES"/>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1445" y="584"/>
+            <point key="canvasLocation" x="-1486" y="584"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="wbp-g5-zx4">
@@ -869,154 +874,13 @@
             </objects>
             <point key="canvasLocation" x="-699" y="1187"/>
         </scene>
-        <!--Share View Controller-->
-        <scene sceneID="rc1-Cu-EsO">
-            <objects>
-                <viewController storyboardIdentifier="ShareViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nzS-CS-Oek" customClass="ShareViewController" customModule="Currency_Today" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="E2r-Gy-pOx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebp-o1-nk5">
-                                <rect key="frame" x="50" y="215" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="XbI-YX-oKf"/>
-                                    <constraint firstAttribute="height" constant="70" id="hnS-JX-8ZS"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                    <backgroundConfiguration key="background" cornerRadius="0.0" image="pngwing.com-48" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="facebook:" destination="nzS-CS-Oek" eventType="touchUpInside" id="YRP-Fm-Ejw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6at-P8-u5d">
-                                <rect key="frame" x="172" y="215" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="gCw-tY-3G6"/>
-                                    <constraint firstAttribute="height" constant="70" id="hfM-qv-CYn"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                    <backgroundConfiguration key="background" image="pngwing.com-49" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="instagram:" destination="nzS-CS-Oek" eventType="touchUpInside" id="rUe-Ze-l8R"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVC-lk-U1C">
-                                <rect key="frame" x="294" y="215" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="3Rd-rD-Sxc"/>
-                                    <constraint firstAttribute="height" constant="70" id="3SZ-Lx-oFt"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                    <backgroundConfiguration key="background" image="pngwing.com-50" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="watsapp:" destination="nzS-CS-Oek" eventType="touchUpInside" id="4lY-qH-6zG"/>
-                                    <action selector="whatsapp:" destination="nzS-CS-Oek" eventType="touchUpInside" id="DoI-3p-4fh"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Կիսվիր հավելվածով" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtp-Ga-EtV">
-                                <rect key="frame" x="50" y="114" width="314" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="NLA-nv-Ezp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBS-E0-9qa">
-                                <rect key="frame" x="172" y="355" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="3YN-XW-dM9"/>
-                                    <constraint firstAttribute="height" constant="70" id="l9w-bg-YHG"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                    <backgroundConfiguration key="background" image="pngwing.com-51" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="telegram:" destination="nzS-CS-Oek" eventType="touchUpInside" id="IjB-TL-PT3"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvb-Hm-LE9">
-                                <rect key="frame" x="50" y="293" width="70" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwK-aF-2EM">
-                                <rect key="frame" x="172" y="293" width="70" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBF-WJ-zxk">
-                                <rect key="frame" x="294" y="293" width="70" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telegram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOE-zD-oyg">
-                                <rect key="frame" x="172" y="433" width="70" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="PBx-Dj-iQq"/>
-                        <color key="backgroundColor" red="0.44608253240000001" green="0.8383362889" blue="0.89020860199999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="rtp-Ga-EtV" firstAttribute="leading" secondItem="PBx-Dj-iQq" secondAttribute="leading" constant="50" id="08C-NZ-gku"/>
-                            <constraint firstItem="rtp-Ga-EtV" firstAttribute="top" secondItem="PBx-Dj-iQq" secondAttribute="top" constant="70" id="2Ba-e3-PuV"/>
-                            <constraint firstItem="6at-P8-u5d" firstAttribute="centerX" secondItem="E2r-Gy-pOx" secondAttribute="centerX" id="4dI-Uz-sIY"/>
-                            <constraint firstItem="6at-P8-u5d" firstAttribute="bottom" secondItem="ebp-o1-nk5" secondAttribute="bottom" id="5u7-S8-zkO"/>
-                            <constraint firstItem="Uvb-Hm-LE9" firstAttribute="trailing" secondItem="ebp-o1-nk5" secondAttribute="trailing" id="75A-SB-9tE"/>
-                            <constraint firstItem="OBS-E0-9qa" firstAttribute="centerX" secondItem="E2r-Gy-pOx" secondAttribute="centerX" id="7Kw-jJ-p16"/>
-                            <constraint firstItem="HBF-WJ-zxk" firstAttribute="trailing" secondItem="nVC-lk-U1C" secondAttribute="trailing" id="7tY-bs-Zq0"/>
-                            <constraint firstItem="ebp-o1-nk5" firstAttribute="centerY" secondItem="E2r-Gy-pOx" secondAttribute="centerY" id="8lo-qZ-HrN"/>
-                            <constraint firstItem="6at-P8-u5d" firstAttribute="top" secondItem="ebp-o1-nk5" secondAttribute="top" id="9Iu-mx-Ysd"/>
-                            <constraint firstItem="bOE-zD-oyg" firstAttribute="trailing" secondItem="OBS-E0-9qa" secondAttribute="trailing" id="EMY-et-eex"/>
-                            <constraint firstItem="HBF-WJ-zxk" firstAttribute="leading" secondItem="nVC-lk-U1C" secondAttribute="leading" id="FQW-6i-ZG9"/>
-                            <constraint firstItem="OBS-E0-9qa" firstAttribute="top" secondItem="nVC-lk-U1C" secondAttribute="bottom" constant="70" id="IML-9A-MHp"/>
-                            <constraint firstItem="PBx-Dj-iQq" firstAttribute="trailing" secondItem="nVC-lk-U1C" secondAttribute="trailing" constant="50" id="MDM-Xs-Lmg"/>
-                            <constraint firstItem="Uvb-Hm-LE9" firstAttribute="leading" secondItem="ebp-o1-nk5" secondAttribute="leading" id="QyH-pV-xem"/>
-                            <constraint firstItem="jwK-aF-2EM" firstAttribute="top" secondItem="6at-P8-u5d" secondAttribute="bottom" constant="8" id="SNv-eB-7hP"/>
-                            <constraint firstItem="jwK-aF-2EM" firstAttribute="trailing" secondItem="6at-P8-u5d" secondAttribute="trailing" id="SaK-g3-QYw"/>
-                            <constraint firstItem="nVC-lk-U1C" firstAttribute="bottom" secondItem="ebp-o1-nk5" secondAttribute="bottom" id="aeG-ng-8GZ"/>
-                            <constraint firstItem="HBF-WJ-zxk" firstAttribute="top" secondItem="nVC-lk-U1C" secondAttribute="bottom" constant="8" id="b52-PU-zdH"/>
-                            <constraint firstItem="rtp-Ga-EtV" firstAttribute="centerX" secondItem="E2r-Gy-pOx" secondAttribute="centerX" id="cPd-cG-Bax"/>
-                            <constraint firstItem="bOE-zD-oyg" firstAttribute="leading" secondItem="OBS-E0-9qa" secondAttribute="leading" id="iuo-aT-PRW"/>
-                            <constraint firstItem="nVC-lk-U1C" firstAttribute="top" secondItem="ebp-o1-nk5" secondAttribute="top" id="ja3-o0-NRb"/>
-                            <constraint firstItem="PBx-Dj-iQq" firstAttribute="trailing" secondItem="rtp-Ga-EtV" secondAttribute="trailing" constant="50" id="kHZ-9u-oqV"/>
-                            <constraint firstItem="bOE-zD-oyg" firstAttribute="top" secondItem="OBS-E0-9qa" secondAttribute="bottom" constant="8" id="mzp-DS-rX2"/>
-                            <constraint firstItem="jwK-aF-2EM" firstAttribute="leading" secondItem="6at-P8-u5d" secondAttribute="leading" id="prS-nt-hbr"/>
-                            <constraint firstItem="Uvb-Hm-LE9" firstAttribute="top" secondItem="ebp-o1-nk5" secondAttribute="bottom" constant="8" id="qYO-j0-JIx"/>
-                            <constraint firstItem="6at-P8-u5d" firstAttribute="centerY" secondItem="E2r-Gy-pOx" secondAttribute="centerY" id="usO-c8-6zm"/>
-                            <constraint firstItem="ebp-o1-nk5" firstAttribute="leading" secondItem="PBx-Dj-iQq" secondAttribute="leading" constant="50" id="xBP-GZ-trd"/>
-                        </constraints>
-                    </view>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="500"/>
-                    <connections>
-                        <outlet property="shareApp" destination="rtp-Ga-EtV" id="yNb-fk-txb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y3q-Mz-svy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-700" y="1584"/>
-        </scene>
     </scenes>
     <resources>
         <image name="arm" width="1350" height="933"/>
         <image name="chart.xyaxis.line" catalog="system" width="128" height="101"/>
         <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
         <image name="gearshape.2" catalog="system" width="128" height="100"/>
+        <image name="pngwing.com-4" width="1024" height="1024"/>
         <image name="pngwing.com-48" width="1000" height="750"/>
         <image name="pngwing.com-49" width="1000" height="1000"/>
         <image name="pngwing.com-50" width="1000" height="1000"/>

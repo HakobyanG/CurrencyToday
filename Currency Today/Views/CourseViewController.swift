@@ -26,7 +26,6 @@ class CourseOption {
 
 class CourseViewController: UIViewController {
     
-    @IBOutlet weak var append: UIButton!
     @IBOutlet weak var timeData: UILabel!
     @IBOutlet weak var tableView: UITableView!
     

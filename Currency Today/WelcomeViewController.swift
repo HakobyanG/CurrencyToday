@@ -14,23 +14,13 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var armButton: UIButton!
     @IBOutlet weak var ruButton: UIButton!
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var engButton: UIButton!
     
     var selectedLanguage = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gradient()
-    }
-    func gradient() {
-        let layer = CAGradientLayer()
-        layer.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
-        layer.colors = [UIColor.white.cgColor, UIColor.systemTeal.cgColor]
-        view.layer.addSublayer(layer)
-        view.addSubview(label)
-        view.addSubview(armButton)
-        view.addSubview(ruButton)
-        view.addSubview(engButton)
     }
     @IBAction func buttonAction(_ sender: UIButton) {
         let index = sender.tag
