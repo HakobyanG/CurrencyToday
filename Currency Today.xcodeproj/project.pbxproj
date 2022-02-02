@@ -77,9 +77,6 @@
 		50D2740627AA7B9900D0B305 /* Currency Today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Currency Today.entitlements"; sourceTree = "<group>"; };
 		50E33F2D27AA824D0030A498 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		50E33F2F27AA824D0030A498 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
-		50E33F4727AA8EBC0030A498 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
-		50E33F4A27AA8EBC0030A498 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		50E33F4C27AA8EBC0030A498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50E4C7F22767927500CB56F2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		50E4C7F927679DC600CB56F2 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		5D72A93347E769A5DBEA59E1 /* Pods-Currency Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currency Today.debug.xcconfig"; path = "Target Support Files/Pods-Currency Today/Pods-Currency Today.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				507BD107275A5308008CFE75 /* Currency Today */,
-				50E33F4627AA8EBC0030A498 /* Push */,
 				507BD106275A5308008CFE75 /* Products */,
 				0D0D4874E367869E1519AF55 /* Pods */,
 				D7C7A7C275E975851CDB9143 /* Frameworks */,
@@ -229,16 +225,6 @@
 			path = "Currency Today";
 			sourceTree = "<group>";
 		};
-		50E33F4627AA8EBC0030A498 /* Push */ = {
-			isa = PBXGroup;
-			children = (
-				50E33F4727AA8EBC0030A498 /* NotificationViewController.swift */,
-				50E33F4927AA8EBC0030A498 /* MainInterface.storyboard */,
-				50E33F4C27AA8EBC0030A498 /* Info.plist */,
-			);
-			path = Push;
-			sourceTree = "<group>";
-		};
 		50E4C7F827679D8600CB56F2 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,7 +255,6 @@
 				507BD101275A5308008CFE75 /* Sources */,
 				507BD102275A5308008CFE75 /* Frameworks */,
 				507BD103275A5308008CFE75 /* Resources */,
-				7993119CAF0DA399B7AA0A2C /* [CP] Embed Pods Frameworks */,
 				50E33F3B27AA824D0030A498 /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -333,23 +318,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7993119CAF0DA399B7AA0A2C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Currency Today/Pods-Currency Today-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Currency Today/Pods-Currency Today-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Currency Today/Pods-Currency Today-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D0F65A3B7E0E0B514975AEAB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,14 +396,6 @@
 				507BD114275A5309008CFE75 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		50E33F4927AA8EBC0030A498 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				50E33F4A27AA8EBC0030A498 /* Base */,
-			);
-			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
