@@ -88,8 +88,15 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
         if models[indexPath.item].name == "connect".localized() {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "ConnectWithOurViewController") as! ConnectWithOurViewController
-            self.present(vc, animated: true, completion: nil)
+            let actionSheet = UIAlertController(title: "connect".localized(), message: nil, preferredStyle: .actionSheet)
+            actionSheet.addAction(UIAlertAction(title: "Facebook", style: .default, handler: { (action) in
+                UIApplication.shared.openURL(NSURL(string: "http://www.facebook.com/hakobyan17.1")! as URL)
+            }))
+            actionSheet.addAction(UIAlertAction(title: "Instagram", style: .default, handler: { (action) in
+                UIApplication.shared.openURL(NSURL(string: "http://www.instagram.com/hakobyan17.1")! as URL)
+            }))
+            actionSheet.addAction(UIAlertAction(title: "cancel".localized(), style: .cancel, handler: nil))
+            present(actionSheet, animated: true, completion: nil)
         }else if models[indexPath.item].name == "we".localized() {
             let alert = UIAlertController(title: "we1".localized(), message: "Iy".localized(), preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "ok".localized(), style: .destructive, handler: nil))

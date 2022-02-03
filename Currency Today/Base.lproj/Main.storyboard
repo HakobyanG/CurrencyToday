@@ -181,7 +181,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xXE-W1-gTX"/>
-                        <color key="backgroundColor" red="0.44739086616461471" green="0.84037943867688025" blue="0.89051922466095423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.25754401090000001" green="0.84976786380000002" blue="0.89723819490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DtC-pP-Sdv" firstAttribute="top" secondItem="trV-AY-8dQ" secondAttribute="bottom" constant="8" id="1rM-9E-YP6"/>
                             <constraint firstItem="077-pL-9Ym" firstAttribute="leading" secondItem="D28-p7-dau" secondAttribute="trailing" id="5ON-ub-bT3"/>
@@ -706,174 +706,6 @@
             </objects>
             <point key="canvasLocation" x="-697" y="584"/>
         </scene>
-        <!--Connect With Our View Controller-->
-        <scene sceneID="R6j-Qu-hef">
-            <objects>
-                <viewController storyboardIdentifier="ConnectWithOurViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mQF-h6-sBF" customClass="ConnectWithOurViewController" customModule="Currency_Today" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5q4-cl-hNZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhu-hd-LsP">
-                                <rect key="frame" x="50" y="215" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="aC2-UB-bHy"/>
-                                    <constraint firstAttribute="width" constant="70" id="lW3-kf-Ly1"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                    <backgroundConfiguration key="background" cornerRadius="0.0" image="pngwing.com-48" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="facebook:" destination="mQF-h6-sBF" eventType="touchUpInside" id="cOl-2v-nbz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1FD-Qb-H78">
-                                <rect key="frame" x="172" y="215" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="aMC-M3-dSy"/>
-                                    <constraint firstAttribute="height" constant="70" id="i3m-rl-wbd"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                    <backgroundConfiguration key="background" image="pngwing.com-49" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="instagram:" destination="mQF-h6-sBF" eventType="touchUpInside" id="k2r-xh-AkX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzI-Q5-lQH">
-                                <rect key="frame" x="294" y="215" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="YIY-S0-EBj"/>
-                                    <constraint firstAttribute="width" constant="70" id="xmx-C5-Thj"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                    <backgroundConfiguration key="background" image="pngwing.com-50" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="watsapp:" destination="mQF-h6-sBF" eventType="touchUpInside" id="UTN-LH-nFD"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Սեղմիր և գրիր" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2P-2u-wpp">
-                                <rect key="frame" x="100" y="114" width="214" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="0sm-7d-TBR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bA-r4-sCG">
-                                <rect key="frame" x="239" y="355" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="5uZ-CB-cnK"/>
-                                    <constraint firstAttribute="width" constant="70" id="tLG-ao-Wrd"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                    <backgroundConfiguration key="background" image="pngwing.com-51" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="telegram:" destination="mQF-h6-sBF" eventType="touchUpInside" id="qYm-8q-KSI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8u-AP-9gI">
-                                <rect key="frame" x="105" y="355" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="KfE-9G-v8t"/>
-                                    <constraint firstAttribute="width" constant="70" id="eb2-4L-DQw"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                    <backgroundConfiguration key="background" image="pngwing.com-52" imageContentMode="scaleAspectFit"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="mail:" destination="mQF-h6-sBF" eventType="touchUpInside" id="wBc-Ja-dbj"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLR-cO-OZh">
-                                <rect key="frame" x="50" y="293" width="70" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX6-0U-M06">
-                                <rect key="frame" x="172" y="293" width="70" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgR-LU-g82">
-                                <rect key="frame" x="294" y="293" width="70" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F4-2d-bqc">
-                                <rect key="frame" x="105" y="433" width="70" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telegram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xy-WF-7Da">
-                                <rect key="frame" x="239" y="433" width="70" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="VJf-Bg-DG2"/>
-                        <color key="backgroundColor" red="0.44608253240000001" green="0.8383362889" blue="0.89020860199999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="bX6-0U-M06" firstAttribute="top" secondItem="1FD-Qb-H78" secondAttribute="bottom" constant="8" id="0Gj-bd-JZt"/>
-                            <constraint firstItem="2F4-2d-bqc" firstAttribute="trailing" secondItem="d8u-AP-9gI" secondAttribute="trailing" id="6Ej-rp-1jx"/>
-                            <constraint firstItem="1bA-r4-sCG" firstAttribute="top" secondItem="d8u-AP-9gI" secondAttribute="top" id="6gD-i3-KHN"/>
-                            <constraint firstItem="2F4-2d-bqc" firstAttribute="top" secondItem="d8u-AP-9gI" secondAttribute="bottom" constant="8" id="7OZ-SR-MCr"/>
-                            <constraint firstItem="ZLR-cO-OZh" firstAttribute="trailing" secondItem="Xhu-hd-LsP" secondAttribute="trailing" id="7aK-S4-7oW"/>
-                            <constraint firstItem="1bA-r4-sCG" firstAttribute="bottom" secondItem="d8u-AP-9gI" secondAttribute="bottom" id="82d-MW-lP1"/>
-                            <constraint firstItem="d8u-AP-9gI" firstAttribute="leading" secondItem="VJf-Bg-DG2" secondAttribute="leading" constant="105" id="AWs-dd-ESi"/>
-                            <constraint firstItem="VJf-Bg-DG2" firstAttribute="trailing" secondItem="1bA-r4-sCG" secondAttribute="trailing" constant="105" id="Ac4-o1-dmu"/>
-                            <constraint firstItem="VJf-Bg-DG2" firstAttribute="trailing" secondItem="d2P-2u-wpp" secondAttribute="trailing" constant="100" id="DWr-2c-pu7"/>
-                            <constraint firstItem="cgR-LU-g82" firstAttribute="top" secondItem="NzI-Q5-lQH" secondAttribute="bottom" constant="8" id="GBG-LS-RUR"/>
-                            <constraint firstItem="ZLR-cO-OZh" firstAttribute="top" secondItem="Xhu-hd-LsP" secondAttribute="bottom" constant="8" id="I3x-Li-al6"/>
-                            <constraint firstItem="Xhu-hd-LsP" firstAttribute="centerY" secondItem="5q4-cl-hNZ" secondAttribute="centerY" id="KN0-hM-5p0"/>
-                            <constraint firstItem="0xy-WF-7Da" firstAttribute="top" secondItem="1bA-r4-sCG" secondAttribute="bottom" constant="8" id="KrJ-hC-sex"/>
-                            <constraint firstItem="VJf-Bg-DG2" firstAttribute="trailing" secondItem="NzI-Q5-lQH" secondAttribute="trailing" constant="50" id="NAK-J7-nOX"/>
-                            <constraint firstItem="d2P-2u-wpp" firstAttribute="top" secondItem="VJf-Bg-DG2" secondAttribute="top" constant="70" id="NAN-A4-3On"/>
-                            <constraint firstItem="bX6-0U-M06" firstAttribute="leading" secondItem="1FD-Qb-H78" secondAttribute="leading" id="QXr-IA-vxN"/>
-                            <constraint firstItem="1bA-r4-sCG" firstAttribute="top" secondItem="NzI-Q5-lQH" secondAttribute="bottom" constant="70" id="Sz0-zn-AcB"/>
-                            <constraint firstItem="NzI-Q5-lQH" firstAttribute="top" secondItem="Xhu-hd-LsP" secondAttribute="top" id="U0e-ji-jXX"/>
-                            <constraint firstItem="1FD-Qb-H78" firstAttribute="centerX" secondItem="5q4-cl-hNZ" secondAttribute="centerX" id="UBv-zF-feC"/>
-                            <constraint firstItem="d8u-AP-9gI" firstAttribute="top" secondItem="Xhu-hd-LsP" secondAttribute="bottom" constant="70" id="WHC-2Y-xnf"/>
-                            <constraint firstItem="0xy-WF-7Da" firstAttribute="trailing" secondItem="1bA-r4-sCG" secondAttribute="trailing" id="YJq-1m-hzw"/>
-                            <constraint firstItem="cgR-LU-g82" firstAttribute="trailing" secondItem="NzI-Q5-lQH" secondAttribute="trailing" id="YPk-CV-L63"/>
-                            <constraint firstItem="cgR-LU-g82" firstAttribute="leading" secondItem="NzI-Q5-lQH" secondAttribute="leading" id="bWc-ku-eSZ"/>
-                            <constraint firstItem="1FD-Qb-H78" firstAttribute="centerY" secondItem="5q4-cl-hNZ" secondAttribute="centerY" id="efg-0N-qzo"/>
-                            <constraint firstItem="d2P-2u-wpp" firstAttribute="leading" secondItem="VJf-Bg-DG2" secondAttribute="leading" constant="100" id="fYS-nA-2Xq"/>
-                            <constraint firstItem="NzI-Q5-lQH" firstAttribute="bottom" secondItem="Xhu-hd-LsP" secondAttribute="bottom" id="g5U-p7-nAW"/>
-                            <constraint firstItem="Xhu-hd-LsP" firstAttribute="leading" secondItem="VJf-Bg-DG2" secondAttribute="leading" constant="50" id="lo6-Po-sng"/>
-                            <constraint firstItem="2F4-2d-bqc" firstAttribute="leading" secondItem="d8u-AP-9gI" secondAttribute="leading" id="m9t-c9-2kF"/>
-                            <constraint firstItem="ZLR-cO-OZh" firstAttribute="leading" secondItem="Xhu-hd-LsP" secondAttribute="leading" id="mHL-O4-l94"/>
-                            <constraint firstItem="1FD-Qb-H78" firstAttribute="bottom" secondItem="Xhu-hd-LsP" secondAttribute="bottom" id="nnP-ca-Dav"/>
-                            <constraint firstItem="d2P-2u-wpp" firstAttribute="centerX" secondItem="5q4-cl-hNZ" secondAttribute="centerX" id="qmD-N4-5Vn"/>
-                            <constraint firstItem="bX6-0U-M06" firstAttribute="trailing" secondItem="1FD-Qb-H78" secondAttribute="trailing" id="vyQ-cS-yer"/>
-                            <constraint firstItem="0xy-WF-7Da" firstAttribute="leading" secondItem="1bA-r4-sCG" secondAttribute="leading" id="wRu-fK-EPT"/>
-                            <constraint firstItem="1FD-Qb-H78" firstAttribute="top" secondItem="Xhu-hd-LsP" secondAttribute="top" id="zIj-cA-RfR"/>
-                        </constraints>
-                    </view>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="500"/>
-                    <connections>
-                        <outlet property="clickandwrite" destination="d2P-2u-wpp" id="Zlg-4K-1Eg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F9U-og-RS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-699" y="1187"/>
-        </scene>
     </scenes>
     <resources>
         <image name="arm" width="1350" height="933"/>
@@ -881,11 +713,6 @@
         <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
         <image name="gearshape.2" catalog="system" width="128" height="100"/>
         <image name="pngwing.com-4" width="1024" height="1024"/>
-        <image name="pngwing.com-48" width="1000" height="750"/>
-        <image name="pngwing.com-49" width="1000" height="1000"/>
-        <image name="pngwing.com-50" width="1000" height="1000"/>
-        <image name="pngwing.com-51" width="512" height="512"/>
-        <image name="pngwing.com-52" width="1280" height="1280"/>
         <image name="rub" width="900" height="590"/>
         <image name="usa" width="1280" height="669"/>
         <systemColor name="secondaryLabelColor">
