@@ -97,19 +97,19 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             }))
             actionSheet.addAction(UIAlertAction(title: "cancel".localized(), style: .cancel, handler: nil))
             present(actionSheet, animated: true, completion: nil)
-        }else if models[indexPath.item].name == "we".localized() {
+        } else if models[indexPath.item].name == "we".localized() {
             let alert = UIAlertController(title: "we1".localized(), message: "Iy".localized(), preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "ok".localized(), style: .destructive, handler: nil))
             self.present(alert, animated: true, completion: nil)
-        }else if models[indexPath.item].name == "share".localized() {
+        } else if models[indexPath.item].name == "share".localized() {
             let activityVC = UIActivityViewController(activityItems: [""], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
             self.present(activityVC, animated: true, completion: nil)
-        }else if models[indexPath.item].name == "appInfo".localized() {
+        } else if models[indexPath.item].name == "appInfo".localized() {
             let alert = UIAlertController(title: "appInfo".localized(), message: "info".localized(), preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "ok".localized(), style: .destructive, handler: nil))
             self.present(alert, animated: true, completion: nil)
-        }else if models[indexPath.item].name == "lang".localized() {
+        } else if models[indexPath.item].name == "lang".localized() {
             let vc = storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
             self.present(vc, animated: true, completion: nil)
         }

@@ -18,24 +18,28 @@ class TableViewCell: UITableViewCell {
         view.backgroundColor = .white
         return view
     }()
+    
     private let title: UILabel = {
         let title = UILabel()
         title.numberOfLines = 1
         title.textColor = .systemTeal
         return title
     }()
+    
     private let iconImage: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
         image.tintColor = .white
         return image
     }()
+    
     private let currencyTitle: UILabel = {
         let title = UILabel()
         title.numberOfLines = 1
         title.textColor = .systemGray
         return title
     }()
+    
     private let courseLabel: UILabel = {
         let courseLabel = UILabel()
         courseLabel.numberOfLines = 1

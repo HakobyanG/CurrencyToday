@@ -16,6 +16,7 @@ class Picker {
         self.count = count
     }
 }
+
 class ComvertViewController: UIViewController {
 
     @IBOutlet weak var firstLabel: UILabel!
@@ -112,9 +113,11 @@ class ComvertViewController: UIViewController {
             }
         }.resume()
     }
+    
     @IBAction func backView(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func getNum(_ sender: Any) {
         currencyText.text = currencyText.text! + String((sender as AnyObject).tag)
     }
@@ -122,6 +125,7 @@ class ComvertViewController: UIViewController {
     @IBAction func deleteNum(_ sender: Any) {
         currencyText.text = String(currencyText.text!.dropLast())
     }
+    
     @IBAction func enter(_ sender: Any) {
         guard let amountText = currencyText.text, let theAmountText = Double(amountText) else{return}
         if currencyText.text != "" {
@@ -134,12 +138,15 @@ extension ComvertViewController: UIPickerViewDelegate, UIPickerViewDataSource, U
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return dataSource.count
     }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return dataSource[row].name
     }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         activeCurrency = dataSource[row].count
         updateViews(input: activeCurrency)
