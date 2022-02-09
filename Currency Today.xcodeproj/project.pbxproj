@@ -22,10 +22,10 @@
 		507BD115275A5309008CFE75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 507BD113275A5309008CFE75 /* LaunchScreen.storyboard */; };
 		507BD11D275A613B008CFE75 /* ConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BD11C275A613B008CFE75 /* ConvertViewController.swift */; };
 		507BD11F275A6152008CFE75 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BD11E275A6152008CFE75 /* SettingsViewController.swift */; };
-		50883B2A277B6B7B0023382B /* ComnvertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50883B29277B6B7B0023382B /* ComnvertsViewController.swift */; };
 		508EE32027AA754800B20948 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 508EE31F27AA754800B20948 /* GoogleService-Info.plist */; };
 		50E4C7F42767927500CB56F2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E4C7F22767927500CB56F2 /* TableViewCell.swift */; };
 		50E4C7FB27679DC600CB56F2 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E4C7F927679DC600CB56F2 /* DetailVC.swift */; };
+		50F5240527B2473A00372931 /* ComvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F5240427B2473A00372931 /* ComvertViewController.swift */; };
 		B800CFB5C37C57AA9F242D07 /* Pods_Currency_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489EFD1FE44D3394DE9ADB5F /* Pods_Currency_Today.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +63,6 @@
 		507BD116275A5309008CFE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		507BD11C275A613B008CFE75 /* ConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewController.swift; sourceTree = "<group>"; };
 		507BD11E275A6152008CFE75 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		50883B29277B6B7B0023382B /* ComnvertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComnvertsViewController.swift; sourceTree = "<group>"; };
 		508EE31F27AA754800B20948 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5098884C277201D300E2F0B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		5098884D277201DD00E2F0B3 /* hy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hy; path = hy.lproj/Main.strings; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		50E33F2F27AA824D0030A498 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		50E4C7F22767927500CB56F2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		50E4C7F927679DC600CB56F2 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		50F5240427B2473A00372931 /* ComvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComvertViewController.swift; sourceTree = "<group>"; };
 		5D72A93347E769A5DBEA59E1 /* Pods-Currency Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currency Today.debug.xcconfig"; path = "Target Support Files/Pods-Currency Today/Pods-Currency Today.debug.xcconfig"; sourceTree = "<group>"; };
 		A5FD93E2D9C20F8AB37083FA /* Pods-Currency Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currency Today.release.xcconfig"; path = "Target Support Files/Pods-Currency Today/Pods-Currency Today.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,7 +126,7 @@
 		503E7042275FC9F5000C643A /* CountrysControllers */ = {
 			isa = PBXGroup;
 			children = (
-				50883B29277B6B7B0023382B /* ComnvertsViewController.swift */,
+				50F5240427B2473A00372931 /* ComvertViewController.swift */,
 			);
 			path = CountrysControllers;
 			sourceTree = "<group>";
@@ -348,9 +348,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50883B2A277B6B7B0023382B /* ComnvertsViewController.swift in Sources */,
 				50E4C7F42767927500CB56F2 /* TableViewCell.swift in Sources */,
 				501A94AE275D1DD70027DD78 /* ViewController.swift in Sources */,
+				50F5240527B2473A00372931 /* ComvertViewController.swift in Sources */,
 				5004FEAB276DB9B400BB2E31 /* ConvertsTableViewCell.swift in Sources */,
 				507BD10D275A5308008CFE75 /* CourseViewController.swift in Sources */,
 				507BD109275A5308008CFE75 /* AppDelegate.swift in Sources */,

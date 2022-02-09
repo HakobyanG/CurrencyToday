@@ -85,11 +85,10 @@ extension ConvertViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
         if models[indexPath.item].name != "" {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "ComnvertsViewController") as! ComnvertsViewController
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ComvertViewController") as! ComvertViewController
             vc.ap = models[indexPath.item].api
             vc.text = models[indexPath.item].name
             self.present(vc, animated: true, completion: nil)
-            
         }
     }
     

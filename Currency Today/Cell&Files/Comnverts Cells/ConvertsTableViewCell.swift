@@ -20,7 +20,7 @@ class ConvertsTableViewCell: UITableViewCell {
     }()
     private let iconImage: UIImageView = {
         let image = UIImageView()
-        image.contentMode = .scaleAspectFill
+        image.contentMode = .scaleAspectFit
         return image
     }()
     private let title: UILabel = {
@@ -46,19 +46,19 @@ class ConvertsTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         let size: CGFloat = contentView.frame.size.height - 10
-        let imageSize: CGFloat = size/1.5
-        iconContainer.frame = CGRect(x: contentView.frame.size.width - 80,
-                                     y: 0,
+        iconContainer.frame = CGRect(x: 15,
+                                     y: 6,
                                      width: size,
                                      height: size)
+        let imageSize: CGFloat = size/1.5
         iconImage.frame = CGRect(x: (size - imageSize)/2,
                                  y: (size - imageSize)/2,
                                  width: imageSize,
                                  height: imageSize)
-        title.frame = CGRect(x: 15,
+        title.frame = CGRect(x: contentView.frame.size.width - 80,
                              y: 0,
-                             width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
-                             height: contentView.frame.size.height)
+                             width: size,
+                             height: size)
     }
     
     public func configure(with modal: ConvertsOption) {
