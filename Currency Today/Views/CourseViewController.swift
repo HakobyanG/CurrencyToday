@@ -56,7 +56,7 @@ class CourseViewController: UIViewController {
         ])
     }
     
-    func getCurrentDate(){
+    func getCurrentDate() {
         var now = Date()
         var nowComponents = DateComponents()
         let calendar = Calendar.current
@@ -117,6 +117,7 @@ class CourseViewController: UIViewController {
     }
 }
 extension CourseViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models.count
     }
@@ -162,5 +163,4 @@ extension CourseViewController: UITableViewDataSource, UITableViewDelegate {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
-    
 }

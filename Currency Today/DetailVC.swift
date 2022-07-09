@@ -16,6 +16,7 @@ class Counts {
         self.count = count
     }
 }
+
 class DetailVC: UIViewController, ChartViewDelegate {
 
     @IBOutlet weak var name: UILabel!
@@ -53,6 +54,7 @@ class DetailVC: UIViewController, ChartViewDelegate {
         SegControlForYear.setTitle("month".localized(), forSegmentAt: 1)
         SegControlForYear.setTitle("year".localized(), forSegmentAt: 2)
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         barChart.frame = graphikCiew.frame
@@ -69,12 +71,14 @@ class DetailVC: UIViewController, ChartViewDelegate {
         let data = BarChartData(dataSet: set)
         barChart.data = data
     }
+    
     func localize() {
         difference.text = "difference".localized()
         low.text = "low".localized()
         average.text = "average".localized()
         big.text = "big".localized()
     }
+    
     func fetchjson() {
         guard let url = URL(string: "https://open.er-api.com/v6/latest/AMD") else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in

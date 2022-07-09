@@ -7,6 +7,7 @@
 
 import UIKit
 import Localize_Swift
+
 class WelcomeViewController: UIViewController {
 
 
@@ -31,6 +32,7 @@ class WelcomeViewController: UIViewController {
         case 3:
             Localize.setCurrentLanguage("en")
         default:
+            Localize.setCurrentLanguage("hy")
             print("Error")
         }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

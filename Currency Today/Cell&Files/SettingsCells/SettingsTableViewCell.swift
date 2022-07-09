@@ -18,12 +18,14 @@ class SettingsTableViewCell: UITableViewCell {
         view.backgroundColor = .white
         return view
     }()
+    
     private let title: UILabel = {
         let title = UILabel()
         title.numberOfLines = 1
         title.textColor = .systemTeal
         return title
     }()
+    
     private let iconImage: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
@@ -61,6 +63,7 @@ class SettingsTableViewCell: UITableViewCell {
                              width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
                              height: contentView.frame.size.height)
     }
+    
     public func configure(with modal: SettingsOption) {
         iconContainer.backgroundColor = modal.backgroundColor
         iconImage.image = modal.backgroundImage
